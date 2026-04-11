@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://d4g5i2g17nrsk"]
+
+[ext_resource type="Texture2D" uid="uid://cebk743lf1noe" path="res://art/UI/UI_Panel.png" id="1_im3af"]
+[ext_resource type="LabelSettings" uid="uid://ckpc8dkjoh6nt" path="res://UI/todo/listText.tres" id="2_aqv4h"]
+[ext_resource type="PackedScene" uid="uid://dbknnmmiv6qnq" path="res://UI/todo/list_item.tscn" id="4_5ihff"]
+[ext_resource type="Script" uid="uid://d37ds1t2mo3p8" path="res://UI/todo/addButton.gd" id="4_iaio2"]
+[ext_resource type="Texture2D" uid="uid://dpol6838q5csi" path="res://art/UI/Plus.png" id="5_b84s4"]
+
+[node name="ToDo" type="Control" unique_id=458756301]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="NinePatchRect" parent="." unique_id=1733150488]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = -373.0
+offset_right = 450.0
+offset_bottom = 369.0
+grow_vertical = 2
+texture = ExtResource("1_im3af")
+region_rect = Rect2(0, 0, 297, 301)
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 33
+patch_margin_bottom = 37
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=5294112]
+layout_mode = 0
+offset_right = 393.0
+offset_bottom = 742.0
+scale = Vector2(1.0018349, 1)
+theme_override_constants/margin_left = 37
+theme_override_constants/margin_top = 34
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 29
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2020438980]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1238773415]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1091605509]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "To Do List"
+label_settings = ExtResource("2_aqv4h")
+
+[node name="Button" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1876475431]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("5_b84s4")
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1644759671]
+layout_mode = 2
+script = ExtResource("4_iaio2")
+
+[node name="ListItem" parent="PanelContainer/MarginContainer/VBoxContainer/List" unique_id=648824595 instance=ExtResource("4_5ihff")]
+layout_mode = 2
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Button" to="PanelContainer/MarginContainer/VBoxContainer/List" method="_on_pressed"]

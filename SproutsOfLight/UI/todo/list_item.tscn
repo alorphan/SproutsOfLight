@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dbknnmmiv6qnq"]
+
+[ext_resource type="Script" uid="uid://dhsqnx5v86r1h" path="res://UI/todo/list_item.gd" id="1_r6fq1"]
+[ext_resource type="Texture2D" uid="uid://ye6f840icb0d" path="res://art/UI/Minus.png" id="1_ylu5e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqv4h"]
+
+[node name="ListItem" type="HBoxContainer" unique_id=648824595]
+custom_minimum_size = Vector2(300, 0)
+script = ExtResource("1_r6fq1")
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=525939000]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1032815692]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aqv4h")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1142778445]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ylu5e")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
