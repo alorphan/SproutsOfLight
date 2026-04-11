@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-const LIST_ITEM_SCENE = preload("res://todo/list_item.tscn")
+const LIST_ITEM_SCENE = preload("res://UI/todo/list_item.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
