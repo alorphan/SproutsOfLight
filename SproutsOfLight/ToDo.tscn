@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://d4g5i2g17nrsk"]
+
+[ext_resource type="Texture2D" uid="uid://cebk743lf1noe" path="res://art/UI/UI_Panel.png" id="1_im3af"]
+[ext_resource type="LabelSettings" uid="uid://ckpc8dkjoh6nt" path="res://listText.tres" id="2_aqv4h"]
+[ext_resource type="Texture2D" uid="uid://bugnbwk43h07g" path="res://art/UI/UI_Journal.png" id="3_rtwep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqv4h"]
+
+[node name="ToDo" type="Control" unique_id=458756301]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="NinePatchRect" parent="." unique_id=1733150488]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = -367.0
+offset_right = 481.0
+offset_bottom = 375.0
+grow_vertical = 2
+texture = ExtResource("1_im3af")
+region_rect = Rect2(0, 0, 297, 301)
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 33
+patch_margin_bottom = 37
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=5294112]
+layout_mode = 0
+offset_right = 393.0
+offset_bottom = 742.0
+theme_override_constants/margin_left = 37
+theme_override_constants/margin_top = 34
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 29
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1644759671]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/List" unique_id=1091605509]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "To Do List"
+label_settings = ExtResource("2_aqv4h")
+
+[node name="List Item" type="HBoxContainer" parent="PanelContainer/MarginContainer/List" unique_id=594379641]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="PanelContainer/MarginContainer/List/List Item" unique_id=1836422360]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/MarginContainer/List/List Item" unique_id=117261296]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aqv4h")
+
+[node name="List Item2" type="HBoxContainer" parent="PanelContainer/MarginContainer/List" unique_id=1428066161]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="PanelContainer/MarginContainer/List/List Item2" unique_id=1053882420]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/List/List Item2" unique_id=283388174]
+layout_mode = 2
+text = "clean litter box"
+label_settings = ExtResource("2_aqv4h")
+
+[node name="List Item3" type="HBoxContainer" parent="PanelContainer/MarginContainer/List" unique_id=1834755137]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="PanelContainer/MarginContainer/List/List Item3" unique_id=662736994]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/List/List Item3" unique_id=758877176]
+layout_mode = 2
+text = "hug allison"
+label_settings = ExtResource("2_aqv4h")
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/MarginContainer" unique_id=838291859]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("3_rtwep")

@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://cfjrd2oly2app"]
 
+[ext_resource type="Texture2D" uid="uid://dvx5w6jrwi2ys" path="res://art/Environment/Meadow/Meadow_Base.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bugnbwk43h07g" path="res://art/UI/UI_Journal.png" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://d4g5i2g17nrsk" path="res://ToDo.tscn" id="3_h2yge"]
+
 [node name="main" type="Node2D" unique_id=1134265817]
+
+[node name="MeadowBase" type="Sprite2D" parent="." unique_id=1660664027]
+position = Vector2(960.0001, 539.99994)
+scale = Vector2(0.49999994, 0.49999994)
+texture = ExtResource("1_ig7tw")
+
+[node name="UiJournal" type="Sprite2D" parent="." unique_id=273586710]
+position = Vector2(-1351, 650)
+texture = ExtResource("2_h2yge")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=201111065]
+
+[node name="ToDo" parent="CanvasLayer" unique_id=458756301 instance=ExtResource("3_h2yge")]
