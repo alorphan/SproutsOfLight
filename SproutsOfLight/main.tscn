@@ -25,68 +25,71 @@ position = Vector2(-1351, 650)
 texture = ExtResource("2_h2yge")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=201111065]
+visible = false
 
-[node name="MeadowBase" type="Sprite2D" parent="CanvasLayer" unique_id=1725160295]
+[node name="ToDo" parent="CanvasLayer" unique_id=458756301 instance=ExtResource("3_h2yge")]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1649445747]
+
+[node name="MeadowBase" type="Sprite2D" parent="Node2D" unique_id=1725160295]
 position = Vector2(960, 540)
 texture = ExtResource("1_ig7tw")
 
-[node name="MeadowScrapReference" type="Sprite2D" parent="CanvasLayer" unique_id=1095113582]
+[node name="MeadowScrapReference" type="Sprite2D" parent="Node2D" unique_id=1095113582]
 visible = false
 position = Vector2(961, 540)
 texture = ExtResource("4_yaehf")
 
-[node name="ScrapL01Beam" type="Sprite2D" parent="CanvasLayer" unique_id=1639597335]
+[node name="ScrapL01Beam" type="Sprite2D" parent="Node2D" unique_id=1639597335]
 position = Vector2(167, 279)
 texture = ExtResource("5_074og")
 
-[node name="ScrapL02Sheet" type="Sprite2D" parent="CanvasLayer" unique_id=1261471724]
+[node name="ScrapL02Sheet" type="Sprite2D" parent="Node2D" unique_id=1261471724]
 position = Vector2(255, 371)
 texture = ExtResource("6_cegan")
 
-[node name="ScrapL03Barrel" type="Sprite2D" parent="CanvasLayer" unique_id=1644817310]
+[node name="ScrapL03Barrel" type="Sprite2D" parent="Node2D" unique_id=1644817310]
 position = Vector2(254, 463)
 texture = ExtResource("7_82xsv")
 
-[node name="ScrapL04Cylinder" type="Sprite2D" parent="CanvasLayer" unique_id=812775567]
+[node name="ScrapL04Cylinder" type="Sprite2D" parent="Node2D" unique_id=812775567]
 position = Vector2(398, 431)
 texture = ExtResource("8_getpj")
 
-[node name="ScrapL05Sheet02" type="Sprite2D" parent="CanvasLayer" unique_id=1320308141]
+[node name="ScrapL05Sheet02" type="Sprite2D" parent="Node2D" unique_id=1320308141]
 position = Vector2(80, 355)
 texture = ExtResource("9_ryguw")
 
-[node name="ScrapL05Sheet03" type="Sprite2D" parent="CanvasLayer" unique_id=1782220360]
+[node name="ScrapL05Sheet03" type="Sprite2D" parent="Node2D" unique_id=1782220360]
 position = Vector2(1510, 300)
 texture = ExtResource("10_d13ii")
 
-[node name="ScrapL06Barrel02" type="Sprite2D" parent="CanvasLayer" unique_id=1951401766]
+[node name="ScrapL06Barrel02" type="Sprite2D" parent="Node2D" unique_id=1951401766]
 position = Vector2(1584, 383)
 texture = ExtResource("11_1u8w0")
 
-[node name="ScrapL07Pipe" type="Sprite2D" parent="CanvasLayer" unique_id=364930833]
+[node name="ScrapL07Pipe" type="Sprite2D" parent="Node2D" unique_id=364930833]
 position = Vector2(1584, 332)
 texture = ExtResource("12_0odxb")
 
-[node name="ScrapL08Beam" type="Sprite2D" parent="CanvasLayer" unique_id=155220352]
+[node name="ScrapL08Beam" type="Sprite2D" parent="Node2D" unique_id=155220352]
 position = Vector2(1701, 458)
 texture = ExtResource("13_lswn8")
 
-[node name="ScrapL09Sheet04" type="Sprite2D" parent="CanvasLayer" unique_id=1370879884]
+[node name="ScrapL09Sheet04" type="Sprite2D" parent="Node2D" unique_id=1370879884]
 position = Vector2(1628.0001, 945.99994)
 scale = Vector2(1.3024358, 1.2730263)
 texture = ExtResource("14_a6jrf")
 
-[node name="ScrapL10Beam02" type="Sprite2D" parent="CanvasLayer" unique_id=1305641005]
+[node name="ScrapL10Beam02" type="Sprite2D" parent="Node2D" unique_id=1305641005]
 position = Vector2(1775, 439)
 texture = ExtResource("15_xuqvo")
 
-[node name="ScrapL11Rim" type="Sprite2D" parent="CanvasLayer" unique_id=1000607064]
+[node name="ScrapL11Rim" type="Sprite2D" parent="Node2D" unique_id=1000607064]
 position = Vector2(-33, 816)
 texture = ExtResource("16_qsp4k")
 
-[node name="ScrapL12Sheet" type="Sprite2D" parent="CanvasLayer" unique_id=809724914]
+[node name="ScrapL12Sheet" type="Sprite2D" parent="Node2D" unique_id=809724914]
 position = Vector2(352.99997, 939)
 scale = Vector2(1.1634808, 1.1634808)
 texture = ExtResource("17_kq58d")
-
-[node name="ToDo" parent="CanvasLayer" unique_id=458756301 instance=ExtResource("3_h2yge")]

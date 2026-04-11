@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dj1mhi1jcwdnr"]
+
+[ext_resource type="Script" uid="uid://ds02ffqx1e8fy" path="res://art/Environment/Meadow/Organics/swaying_grass.gd" id="1_4128j"]
+[ext_resource type="Shader" uid="uid://fq1rv6em0k7k" path="res://art/Environment/Meadow/Organics/SwayingGrass.gdshader" id="1_tdr2o"]
+[ext_resource type="Texture2D" uid="uid://cpar0cugw873y" path="res://art/Environment/Meadow/Organics/Grass_01.png" id="2_4128j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s16o2"]
+resource_local_to_scene = true
+shader = ExtResource("1_tdr2o")
+shader_parameter/skew = -1.6600000000000001
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s16o2"]
+size = Vector2(41, 99)
+
+[node name="SwayingGrass" type="Area2D" unique_id=162582034]
+script = ExtResource("1_4128j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037038235]
+material = SubResource("ShaderMaterial_s16o2")
+texture = ExtResource("2_4128j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683138209]
+position = Vector2(-1.5, -4.5)
+shape = SubResource("RectangleShape2D_s16o2")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
