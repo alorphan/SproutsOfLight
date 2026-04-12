@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://byr4gl3vgxaas" path="res://UI/focusTimer/focus_timer.tscn" id="2_2o5uh"]
 [ext_resource type="Texture2D" uid="uid://bugnbwk43h07g" path="res://art/UI/UI_Journal.png" id="2_bytes"]
 [ext_resource type="PackedScene" uid="uid://bw3ugs10fyow2" path="res://UI/compendium/compendium.tscn" id="4_rnl6m"]
+[ext_resource type="Texture2D" uid="uid://bommgunf4cry8" path="res://art/UI/UI_Timer.png" id="6_0j753"]
+[ext_resource type="Texture2D" uid="uid://nikcj8lrjvly" path="res://art/UI/UI_Compendium.png" id="7_i0a73"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=338234812]
 script = ExtResource("1_b1lf8")
@@ -30,7 +32,7 @@ offset_right = 177.0
 grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/separation = 4
+theme_override_constants/separation = 35
 
 [node name="ToDoButton" type="TextureButton" parent="Ribbon" unique_id=120069154]
 layout_mode = 2
@@ -42,13 +44,13 @@ texture_normal = ExtResource("2_bytes")
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("2_bytes")
+texture_normal = ExtResource("6_0j753")
 
 [node name="CompendiumButton" type="TextureButton" parent="Ribbon" unique_id=851770365]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("2_bytes")
+texture_normal = ExtResource("7_i0a73")
 
 [connection signal="pressed" from="Ribbon/ToDoButton" to="." method="_on_to_do_button_pressed"]
 [connection signal="pressed" from="Ribbon/ClockButton" to="." method="_on_clock_button_pressed"]

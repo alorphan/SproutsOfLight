@@ -17,76 +17,89 @@
 [ext_resource type="Texture2D" uid="uid://b2pdnff1j1a7f" path="res://art/Environment/Meadow/Scrap/Scrap_l12_Sheet.png" id="17_kq58d"]
 [ext_resource type="PackedScene" uid="uid://bh64f12nmclmn" path="res://UI/hud.tscn" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="18_074og"]
+[ext_resource type="Texture2D" uid="uid://crplcamgcclg8" path="res://art/Characters/Sol.png" id="18_cegan"]
+[ext_resource type="Texture2D" uid="uid://bubaa6rowo7x0" path="res://art/Environment/Meadow/Valley_Base.png" id="19_cegan"]
+
+[sub_resource type="Curve2D" id="Curve2D_074og"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 928, 962, 0, 0, 0, 0, 578, 763, 0, 0, 0, 0, 925, 643)
+}
+point_count = 3
 
 [node name="main" type="Node2D" unique_id=1134265817]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1649445747]
+[node name="ValleyBG" type="Sprite2D" parent="." unique_id=1967708479]
+position = Vector2(963, 541)
+texture = ExtResource("19_cegan")
 
-[node name="MeadowBase" type="Sprite2D" parent="Node2D" unique_id=1725160295]
+[node name="MeadowBG" type="Node2D" parent="." unique_id=1649445747]
+visible = false
+
+[node name="MeadowBase" type="Sprite2D" parent="MeadowBG" unique_id=1725160295]
 position = Vector2(960, 540)
 texture = ExtResource("1_ig7tw")
 
-[node name="MeadowScrapReference" type="Sprite2D" parent="Node2D" unique_id=1095113582]
+[node name="MeadowScrapReference" type="Sprite2D" parent="MeadowBG" unique_id=1095113582]
 visible = false
 position = Vector2(961, 540)
 texture = ExtResource("4_yaehf")
 
-[node name="ScrapL01Beam" type="Sprite2D" parent="Node2D" unique_id=1639597335]
+[node name="ScrapL01Beam" type="Sprite2D" parent="MeadowBG" unique_id=1639597335]
 position = Vector2(167, 279)
 texture = ExtResource("5_074og")
 
-[node name="ScrapL02Sheet" type="Sprite2D" parent="Node2D" unique_id=1261471724]
+[node name="ScrapL02Sheet" type="Sprite2D" parent="MeadowBG" unique_id=1261471724]
 position = Vector2(255, 371)
 texture = ExtResource("6_cegan")
 
-[node name="ScrapL03Barrel" type="Sprite2D" parent="Node2D" unique_id=1644817310]
+[node name="ScrapL03Barrel" type="Sprite2D" parent="MeadowBG" unique_id=1644817310]
 position = Vector2(254, 463)
 texture = ExtResource("7_82xsv")
 
-[node name="ScrapL04Cylinder" type="Sprite2D" parent="Node2D" unique_id=812775567]
+[node name="ScrapL04Cylinder" type="Sprite2D" parent="MeadowBG" unique_id=812775567]
 position = Vector2(398, 431)
 texture = ExtResource("8_getpj")
 
-[node name="ScrapL05Sheet02" type="Sprite2D" parent="Node2D" unique_id=1320308141]
+[node name="ScrapL05Sheet02" type="Sprite2D" parent="MeadowBG" unique_id=1320308141]
 position = Vector2(80, 355)
 texture = ExtResource("9_ryguw")
 
-[node name="ScrapL05Sheet03" type="Sprite2D" parent="Node2D" unique_id=1782220360]
+[node name="ScrapL05Sheet03" type="Sprite2D" parent="MeadowBG" unique_id=1782220360]
 position = Vector2(1510, 300)
 texture = ExtResource("10_d13ii")
 
-[node name="ScrapL06Barrel02" type="Sprite2D" parent="Node2D" unique_id=1951401766]
+[node name="ScrapL06Barrel02" type="Sprite2D" parent="MeadowBG" unique_id=1951401766]
 position = Vector2(1584, 383)
 texture = ExtResource("11_1u8w0")
 
-[node name="ScrapL07Pipe" type="Sprite2D" parent="Node2D" unique_id=364930833]
+[node name="ScrapL07Pipe" type="Sprite2D" parent="MeadowBG" unique_id=364930833]
 position = Vector2(1584, 332)
 texture = ExtResource("12_0odxb")
 
-[node name="ScrapL08Beam" type="Sprite2D" parent="Node2D" unique_id=155220352]
+[node name="ScrapL08Beam" type="Sprite2D" parent="MeadowBG" unique_id=155220352]
 position = Vector2(1701, 458)
 texture = ExtResource("13_lswn8")
 
-[node name="ScrapL09Sheet04" type="Sprite2D" parent="Node2D" unique_id=1370879884]
+[node name="ScrapL09Sheet04" type="Sprite2D" parent="MeadowBG" unique_id=1370879884]
 position = Vector2(1628.0001, 945.99994)
 scale = Vector2(1.3024358, 1.2730263)
 texture = ExtResource("14_a6jrf")
 
-[node name="ScrapL10Beam02" type="Sprite2D" parent="Node2D" unique_id=1305641005]
+[node name="ScrapL10Beam02" type="Sprite2D" parent="MeadowBG" unique_id=1305641005]
 position = Vector2(1775, 439)
 texture = ExtResource("15_xuqvo")
 
-[node name="ScrapL11Rim" type="Sprite2D" parent="Node2D" unique_id=1000607064]
+[node name="ScrapL11Rim" type="Sprite2D" parent="MeadowBG" unique_id=1000607064]
 position = Vector2(-33, 816)
 scale = Vector2(1, 1.0013297)
 texture = ExtResource("16_qsp4k")
 
-[node name="ScrapL12Sheet" type="Sprite2D" parent="Node2D" unique_id=809724914]
+[node name="ScrapL12Sheet" type="Sprite2D" parent="MeadowBG" unique_id=809724914]
 position = Vector2(352.99997, 939)
 scale = Vector2(1.1634808, 1.1634808)
 texture = ExtResource("17_kq58d")
 
-[node name="SwayingGrass" parent="Node2D" unique_id=162582034 instance=ExtResource("18_074og")]
+[node name="SwayingGrass" parent="MeadowBG" unique_id=162582034 instance=ExtResource("18_074og")]
 position = Vector2(576, 298)
 
 [node name="SwayingGrass" parent="." unique_id=2141582041 instance=ExtResource("18_074og")]
@@ -94,3 +107,16 @@ position = Vector2(595, 312)
 rotation = 0.48984787
 
 [node name="CanvasLayer" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=522285044]
+curve = SubResource("Curve2D_074og")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=2087909026]
+position = Vector2(719.8749, 713.9366)
+rotation = -0.3329473
+progress = 552.7378
+rotates = false
+
+[node name="Sol" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=829069097]
+scale = Vector2(0.48000002, 0.4820602)
+texture = ExtResource("18_cegan")
