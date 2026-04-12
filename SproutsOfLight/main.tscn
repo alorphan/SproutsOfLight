@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://cfjrd2oly2app"]
 
 [ext_resource type="Texture2D" uid="uid://dvx5w6jrwi2ys" path="res://art/Environment/Meadow/Meadow_Base.png" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://bugnbwk43h07g" path="res://art/UI/UI_Journal.png" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://d4g5i2g17nrsk" path="res://UI/todo/ToDo.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cp3q8t75e1fdb" path="res://art/Environment/Meadow/Meadow_ScrapReference.png" id="4_yaehf"]
 [ext_resource type="Texture2D" uid="uid://ct8nha4lbbvtl" path="res://art/Environment/Meadow/Scrap/Scrap_l01_Beam.png" id="5_074og"]
 [ext_resource type="Texture2D" uid="uid://drgv1mu8nl82y" path="res://art/Environment/Meadow/Scrap/Scrap_l02_Sheet.png" id="6_cegan"]
@@ -17,18 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://cum7jwvgme30e" path="res://art/Environment/Meadow/Scrap/Scrap_l10_Beam02.png" id="15_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://eg1gsmrjq36g" path="res://art/Environment/Meadow/Scrap/Scrap_l11_Rim.png" id="16_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://b2pdnff1j1a7f" path="res://art/Environment/Meadow/Scrap/Scrap_l12_Sheet.png" id="17_kq58d"]
+[ext_resource type="PackedScene" uid="uid://bh64f12nmclmn" path="res://UI/hud.tscn" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="18_074og"]
 
 [node name="main" type="Node2D" unique_id=1134265817]
-
-[node name="UiJournal" type="Sprite2D" parent="." unique_id=273586710]
-position = Vector2(-1351, 650)
-texture = ExtResource("2_h2yge")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=201111065]
-visible = false
-
-[node name="ToDo" parent="CanvasLayer" unique_id=458756301 instance=ExtResource("3_h2yge")]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1649445747]
 
@@ -88,6 +78,7 @@ texture = ExtResource("15_xuqvo")
 
 [node name="ScrapL11Rim" type="Sprite2D" parent="Node2D" unique_id=1000607064]
 position = Vector2(-33, 816)
+scale = Vector2(1, 1.0013297)
 texture = ExtResource("16_qsp4k")
 
 [node name="ScrapL12Sheet" type="Sprite2D" parent="Node2D" unique_id=809724914]
@@ -101,3 +92,5 @@ position = Vector2(576, 298)
 [node name="SwayingGrass" parent="." unique_id=2141582041 instance=ExtResource("18_074og")]
 position = Vector2(595, 312)
 rotation = 0.48984787
+
+[node name="CanvasLayer" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]

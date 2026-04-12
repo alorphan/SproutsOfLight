@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://byr4gl3vgxaas"]
+
+[ext_resource type="Texture2D" uid="uid://cebk743lf1noe" path="res://art/UI/UI_Panel.png" id="1_ubcxb"]
+[ext_resource type="Texture2D" uid="uid://ye6f840icb0d" path="res://art/UI/Minus.png" id="2_x21ol"]
+[ext_resource type="FontFile" uid="uid://bsu5fnq313h1o" path="res://art/RobotoMono-VariableFont_wght.ttf" id="3_7xtlv"]
+[ext_resource type="LabelSettings" uid="uid://ckpc8dkjoh6nt" path="res://UI/listText.tres" id="3_mry33"]
+[ext_resource type="Texture2D" uid="uid://dpol6838q5csi" path="res://art/UI/Plus.png" id="3_yyprc"]
+[ext_resource type="Script" uid="uid://dx2veqhhlrce7" path="res://UI/focusTimer/timer_label.gd" id="5_m6pjy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubcxb"]
+bg_color = Color(0.8416434, 0.499775, 0.32967326, 1)
+
+[node name="FocusTimer" type="Control" unique_id=903747130]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="NinePatchRect" parent="." unique_id=1485378194]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.029166667
+anchor_top = 0.32685184
+anchor_right = 0.253125
+anchor_bottom = 0.6675926
+offset_right = -3.0517578e-05
+texture = ExtResource("1_ubcxb")
+region_rect = Rect2(0, 0, 297, 301)
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 33
+patch_margin_bottom = 37
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=617417506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.64102
+offset_top = -159.0
+offset_right = 195.64102
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0018349, 1)
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PomodoroTimer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1094403740]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="StopwatchPanel" type="PanelContainer" parent="PanelContainer/MarginContainer/PomodoroTimer" unique_id=1780062267]
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ubcxb")
+
+[node name="TimerContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel" unique_id=1666175427]
+layout_mode = 2
+
+[node name="PomoLabel" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer" unique_id=1181316938]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_font_sizes/font_size = 20
+text = "Pomodoro Timer"
+label_settings = ExtResource("3_mry33")
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer" unique_id=1229683291 node_paths=PackedStringArray("session_length")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_7xtlv")
+theme_override_font_sizes/font_size = 51
+text = "25:00"
+script = ExtResource("5_m6pjy")
+session_length = NodePath("../../../TimerSettings/SessionLength/SessionLengthCombo/SessionLengthNum")
+
+[node name="Timer" type="Timer" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" unique_id=442625445]
+
+[node name="TimerButtons" type="HBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer" unique_id=1777338882]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StartButton" type="Button" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons" unique_id=824002963]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7xtlv")
+text = "Start"
+
+[node name="ResetButton" type="Button" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons" unique_id=725838679]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7xtlv")
+text = "Reset"
+
+[node name="PauseButton" type="Button" parent="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons" unique_id=807125703]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7xtlv")
+text = "Pause"
+
+[node name="TimerSettings" type="HBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer" unique_id=991684278]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 71
+
+[node name="BreakLength" type="VBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings" unique_id=584267498]
+layout_mode = 2
+
+[node name="BreakLengthCombo" type="HBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/BreakLength" unique_id=1589143080]
+layout_mode = 2
+
+[node name="MinusButton" type="TextureButton" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/BreakLength/BreakLengthCombo" unique_id=819517776]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_x21ol")
+
+[node name="BreakLengthNum" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/BreakLength/BreakLengthCombo" unique_id=1570833103]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_7xtlv")
+theme_override_font_sizes/font_size = 32
+text = "5"
+
+[node name="PlusButton" type="TextureButton" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/BreakLength/BreakLengthCombo" unique_id=2041673544]
+layout_mode = 2
+texture_normal = ExtResource("3_yyprc")
+
+[node name="BreakLengthLabel" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/BreakLength" unique_id=616088495]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+text = "Break Length"
+
+[node name="SessionLength" type="VBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings" unique_id=2141867170]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SessionLengthCombo" type="HBoxContainer" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength" unique_id=429526521]
+layout_mode = 2
+
+[node name="MinusSessionButton" type="TextureButton" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength/SessionLengthCombo" unique_id=830083433]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_x21ol")
+
+[node name="SessionLengthNum" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength/SessionLengthCombo" unique_id=1731513185]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_7xtlv")
+theme_override_font_sizes/font_size = 32
+text = "25"
+
+[node name="PlusSessionbutton" type="TextureButton" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength/SessionLengthCombo" unique_id=1846261020]
+layout_mode = 2
+texture_normal = ExtResource("3_yyprc")
+
+[node name="SessionlengthLabel" type="Label" parent="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength" unique_id=385986827]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
+text = "Session Length"
+label_settings = ExtResource("3_mry33")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons/StartButton" to="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" method="_on_start_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons/ResetButton" to="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerButtons/PauseButton" to="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength/SessionLengthCombo/MinusSessionButton" to="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" method="_on_minus_session_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/PomodoroTimer/TimerSettings/SessionLength/SessionLengthCombo/PlusSessionbutton" to="PanelContainer/MarginContainer/PomodoroTimer/StopwatchPanel/TimerContainer/TimerLabel" method="_on_plus_sessionbutton_pressed"]

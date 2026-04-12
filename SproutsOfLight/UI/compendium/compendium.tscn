@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://bw3ugs10fyow2"]
+
+[ext_resource type="Texture2D" uid="uid://cebk743lf1noe" path="res://art/UI/UI_Panel.png" id="1_vo5jm"]
+[ext_resource type="Texture2D" uid="uid://cvb8bv6ywpgvm" path="res://art/UI/item_languagefragment_lift.png" id="2_2xkk1"]
+[ext_resource type="LabelSettings" uid="uid://ckpc8dkjoh6nt" path="res://UI/listText.tres" id="2_7heum"]
+
+[node name="Compendium" type="Control" unique_id=608196469]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="NinePatchRect" parent="." unique_id=134749909]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 79.0
+offset_top = -234.0
+offset_right = 607.0
+offset_bottom = 232.0
+grow_vertical = 2
+texture = ExtResource("1_vo5jm")
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 33
+patch_margin_bottom = 37
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=408728935]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -213.0
+offset_top = 39.0
+offset_right = 213.0
+offset_bottom = 63.0
+grow_horizontal = 2
+size_flags_vertical = 0
+text = "Compendium"
+label_settings = ExtResource("2_7heum")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=505116462]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 73.0
+offset_right = 477.0
+offset_bottom = 414.0
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=297559422]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=49952017]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=285457701]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=1658545486]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=404841343]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=1994662263]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=1761852900]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=522789862]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton9" type="TextureButton" parent="PanelContainer/GridContainer" unique_id=536911238]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 5

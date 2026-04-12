@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bh64f12nmclmn"]
+
+[ext_resource type="Script" uid="uid://c6let0hs5kfun" path="res://UI/hud.gd" id="1_b1lf8"]
+[ext_resource type="PackedScene" uid="uid://d4g5i2g17nrsk" path="res://UI/todo/to_do.tscn" id="1_ne75i"]
+[ext_resource type="PackedScene" uid="uid://byr4gl3vgxaas" path="res://UI/focusTimer/focus_timer.tscn" id="2_2o5uh"]
+[ext_resource type="Texture2D" uid="uid://bugnbwk43h07g" path="res://art/UI/UI_Journal.png" id="2_bytes"]
+[ext_resource type="PackedScene" uid="uid://bw3ugs10fyow2" path="res://UI/compendium/compendium.tscn" id="4_rnl6m"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=338234812]
+script = ExtResource("1_b1lf8")
+
+[node name="ToDo" parent="." unique_id=458756301 instance=ExtResource("1_ne75i")]
+visible = false
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = 0.0
+
+[node name="FocusTimer" parent="." unique_id=903747130 instance=ExtResource("2_2o5uh")]
+visible = false
+
+[node name="Compendium" parent="." unique_id=608196469 instance=ExtResource("4_rnl6m")]
+visible = false
+
+[node name="Ribbon" type="HBoxContainer" parent="." unique_id=1098318348]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -174.0
+offset_right = 177.0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 4
+
+[node name="ToDoButton" type="TextureButton" parent="Ribbon" unique_id=120069154]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("2_bytes")
+
+[node name="ClockButton" type="TextureButton" parent="Ribbon" unique_id=715648306]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("2_bytes")
+
+[node name="CompendiumButton" type="TextureButton" parent="Ribbon" unique_id=851770365]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("2_bytes")
+
+[connection signal="pressed" from="Ribbon/ToDoButton" to="." method="_on_to_do_button_pressed"]
+[connection signal="pressed" from="Ribbon/ClockButton" to="." method="_on_clock_button_pressed"]
+[connection signal="pressed" from="Ribbon/CompendiumButton" to="." method="_on_compendium_button_pressed"]

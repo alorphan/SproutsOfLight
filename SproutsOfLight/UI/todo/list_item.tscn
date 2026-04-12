@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbknnmmiv6qnq"]
 
-[ext_resource type="Script" uid="uid://dhsqnx5v86r1h" path="res://UI/todo/list_item.gd" id="1_r6fq1"]
+[ext_resource type="Script" uid="uid://dhsqnx5v86r1h" path="res://UI/todo/listItem.gd" id="1_r6fq1"]
 [ext_resource type="Texture2D" uid="uid://ye6f840icb0d" path="res://art/UI/Minus.png" id="1_ylu5e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqv4h"]
