@@ -3,25 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://bh6x2hxc3fbek" path="res://art/UI/UI_JournalBase.png" id="1_infal"]
 [ext_resource type="Texture2D" uid="uid://cvb8bv6ywpgvm" path="res://art/UI/item_languagefragment_lift.png" id="2_2xkk1"]
 [ext_resource type="FontFile" uid="uid://bsu5fnq313h1o" path="res://art/RobotoMono-VariableFont_wght.ttf" id="2_7heum"]
+[ext_resource type="Texture2D" uid="uid://rq2nk1scnnum" path="res://art/UI/UI_Tile.png" id="3_infal"]
+[ext_resource type="Texture2D" uid="uid://baocmsipp8o8x" path="res://art/UI/UI_Tile_Big.png" id="5_qssow"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vo5jm"]
 texture = ExtResource("1_infal")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2xkk1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xkk1"]
-bg_color = Color(0.661147, 0.55945385, 0.5445761, 0.56078434)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.19215687, 0.09411765, 0.17254902, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qssow"]
+texture = ExtResource("3_infal")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7heum"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wl3no"]
+texture = ExtResource("5_qssow")
 
 [node name="Compendium" type="Control" unique_id=608196469]
 layout_mode = 3
@@ -76,262 +72,172 @@ theme_override_fonts/font = ExtResource("2_7heum")
 theme_override_font_sizes/font_size = 38
 text = "Compendium"
 
-[node name="GridContainer" type="GridContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer" unique_id=1274622729]
+[node name="InventoryGrid" type="GridContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer" unique_id=1274622729]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-columns = 5
+columns = 4
 
-[node name="PanelContainer" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1914009653]
+[node name="PanelContainer" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1914009653]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer" unique_id=1758974555]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer" unique_id=508611558]
 layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("2_2xkk1")
-expand_mode = 1
+texture_normal = ExtResource("2_2xkk1")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer2" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1420096071]
+[node name="PanelContainer2" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=490297449]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer2" unique_id=1049182084]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer2" unique_id=349054201]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer3" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=343242310]
+[node name="PanelContainer3" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1039194105]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer3" unique_id=831131839]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer3" unique_id=1924515865]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer4" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=219475872]
+[node name="PanelContainer4" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1243764022]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer4" unique_id=119068615]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer4" unique_id=1576777762]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer5" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=514500680]
+[node name="PanelContainer5" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1146830429]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer5" unique_id=149393634]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer5" unique_id=1688408217]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer6" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1551957205]
+[node name="PanelContainer6" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1746670123]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer6" unique_id=1940795874]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer6" unique_id=1909211430]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer7" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1292103208]
+[node name="PanelContainer7" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=117342812]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer7" unique_id=135706465]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer7" unique_id=1796471929]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer8" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1987796413]
+[node name="PanelContainer8" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1439709349]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer8" unique_id=188680767]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer8" unique_id=1019541834]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer9" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=630654763]
+[node name="PanelContainer9" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=311484328]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer9" unique_id=1405442776]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer9" unique_id=964938804]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer10" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1721766465]
+[node name="PanelContainer10" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1725344285]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer10" unique_id=39427163]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer10" unique_id=211067130]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer11" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1423361049]
+[node name="PanelContainer11" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1959068931]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer11" unique_id=866120397]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer11" unique_id=1389774714]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer12" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=33291102]
+[node name="PanelContainer12" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1435256081]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer12" unique_id=217025483]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer12" unique_id=899766216]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer13" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=23928311]
+[node name="PanelContainer13" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=255868847]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer13" unique_id=2144317777]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer13" unique_id=1079608535]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer14" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=334274629]
+[node name="PanelContainer14" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1328068126]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer14" unique_id=1413343176]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer14" unique_id=590357222]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer15" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1519472489]
+[node name="PanelContainer15" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=1840200951]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer15" unique_id=903424821]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer15" unique_id=1563606425]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PanelContainer16" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=213586378]
+[node name="PanelContainer16" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid" unique_id=233804625]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qssow")
 
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer16" unique_id=649194422]
-custom_minimum_size = Vector2(64, 64)
+[node name="TextureButton" type="TextureButton" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/InventoryGrid/PanelContainer16" unique_id=1519486914]
 layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer17" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1276910268]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer17" unique_id=1115206883]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer18" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1197862321]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer18" unique_id=1057221058]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer19" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1028007431]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer19" unique_id=1561236340]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer20" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1199230729]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer20" unique_id=1893516358]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer21" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1547531213]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer21" unique_id=74831436]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer22" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1631092178]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer22" unique_id=1730265544]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer23" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=1380658619]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer23" unique_id=1459446259]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer24" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=123893930]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer24" unique_id=1509828733]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
-
-[node name="PanelContainer25" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer" unique_id=455495733]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
-
-[node name="TextureRect" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page1/VBoxContainer/GridContainer/PanelContainer25" unique_id=787354445]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 3
-expand_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Page2" type="Panel" parent="Book/MarginContainer/HBoxContainer" unique_id=309463439]
 layout_mode = 2
@@ -355,7 +261,7 @@ theme_override_constants/separation = 20
 
 [node name="PanelContainer" type="PanelContainer" parent="Book/MarginContainer/HBoxContainer/Page2/VBoxContainer" unique_id=1738021799]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkk1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_wl3no")
 
 [node name="ItemIcon" type="TextureRect" parent="Book/MarginContainer/HBoxContainer/Page2/VBoxContainer/PanelContainer" unique_id=2126169128]
 custom_minimum_size = Vector2(256, 256)

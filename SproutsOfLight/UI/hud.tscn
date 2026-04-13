@@ -7,10 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://l3bld2ku7qc7" path="res://art/UI/UI_ToDo.png" id="5_i0a73"]
 [ext_resource type="Texture2D" uid="uid://bommgunf4cry8" path="res://art/UI/UI_Timer.png" id="6_0j753"]
 [ext_resource type="Texture2D" uid="uid://nikcj8lrjvly" path="res://art/UI/UI_Compendium.png" id="7_i0a73"]
-[ext_resource type="FontFile" uid="uid://bsu5fnq313h1o" path="res://art/RobotoMono-VariableFont_wght.ttf" id="8_i0a73"]
+[ext_resource type="Texture2D" uid="uid://cyl68fkg0ceix" path="res://art/UI/UI_ProgressBar_Incomplete.png" id="8_vs5gg"]
+[ext_resource type="Texture2D" uid="uid://bcosn5kkibkqy" path="res://art/UI/UI_ProgressBar_Border.png" id="9_vs5gg"]
+[ext_resource type="Texture2D" uid="uid://63g303qipaj8" path="res://art/UI/UI_ProgressBar_Complete.png" id="10_23s3h"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=338234812]
 script = ExtResource("1_b1lf8")
+
+[node name="XPBar" type="MarginContainer" parent="." unique_id=1824146697]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.5
+offset_right = 440.5
+offset_bottom = 73.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="XPBar" unique_id=1354167134]
+layout_mode = 2
+value = 35.0
+texture_under = ExtResource("8_vs5gg")
+texture_over = ExtResource("9_vs5gg")
+texture_progress = ExtResource("10_23s3h")
 
 [node name="ToDo" parent="." unique_id=458756301 instance=ExtResource("1_ne75i")]
 visible = false
@@ -33,10 +52,10 @@ offset_right = 177.0
 grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/separation = -55
+theme_override_constants/separation = 8
 
 [node name="ToDoButton" type="TextureButton" parent="Ribbon" unique_id=120069154]
-custom_minimum_size = Vector2(256, 256)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -45,7 +64,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ClockButton" type="TextureButton" parent="Ribbon" unique_id=715648306]
-custom_minimum_size = Vector2(256, 256)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -54,31 +73,13 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="CompendiumButton" type="TextureButton" parent="Ribbon" unique_id=851770365]
-custom_minimum_size = Vector2(256, 256)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 texture_normal = ExtResource("7_i0a73")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1824146697]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer" unique_id=1211631375]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("8_i0a73")
-value = 50.0
-show_percentage = false
 
 [connection signal="pressed" from="Ribbon/ToDoButton" to="." method="_on_to_do_button_pressed"]
 [connection signal="pressed" from="Ribbon/ClockButton" to="." method="_on_clock_button_pressed"]
