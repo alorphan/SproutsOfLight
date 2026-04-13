@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ca677l6ikxdu7" path="res://art/Characters/Sol/KneelingAction/sol_kneelingaction_02.png" id="28_qsp4k"]
 [ext_resource type="Script" uid="uid://cqghr4pyd3u5u" path="res://Characters/sol.gd" id="29_qsp4k"]
 [ext_resource type="AudioStream" uid="uid://scb3j7ocdjcy" path="res://music/song for gaming 2.mp3" id="30_kq58d"]
+[ext_resource type="Texture2D" uid="uid://d2pugfshxgy27" path="res://art/Environment/Meadow/Valley_LushReference.png" id="31_seu75"]
 
 [sub_resource type="Curve2D" id="Curve2D_074og"]
 _data = {
@@ -98,8 +99,8 @@ animations = [{
 [node name="CanvasLayer" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
 [node name="ValleyBG" type="Sprite2D" parent="." unique_id=1967708479]
-position = Vector2(959.6667, 540)
-scale = Vector2(0.4990741, 0.49907413)
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_cegan")
 
 [node name="MeadowBG" type="Node2D" parent="." unique_id=1649445747]
@@ -224,3 +225,7 @@ script = ExtResource("29_qsp4k")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1734629838]
 stream = ExtResource("30_kq58d")
 autoplay = true
+
+[node name="ValleyLushReference" type="Sprite2D" parent="." unique_id=619342980]
+position = Vector2(960, 540)
+texture = ExtResource("31_seu75")
