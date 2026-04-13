@@ -19,6 +19,17 @@
 [ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="18_074og"]
 [ext_resource type="Texture2D" uid="uid://crplcamgcclg8" path="res://art/Characters/Sol.png" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://bubaa6rowo7x0" path="res://art/Environment/Meadow/Valley_Base.png" id="19_cegan"]
+[ext_resource type="Texture2D" uid="uid://cds86cmr0jptj" path="res://art/Characters/Des/Hosing/des_hose_01.png" id="20_0odxb"]
+[ext_resource type="Texture2D" uid="uid://b6wm4ks13v6v3" path="res://art/Characters/Des/Hosing/des_hosing_01.png" id="20_82xsv"]
+[ext_resource type="Script" uid="uid://dyrroecvv66s3" path="res://Characters/des.gd" id="20_lswn8"]
+[ext_resource type="Texture2D" uid="uid://de4am721jeehs" path="res://art/Characters/Des/Hosing/des_hosing_02.png" id="21_getpj"]
+[ext_resource type="Texture2D" uid="uid://bjl6qylx4m4w5" path="res://art/Characters/Des/Hosing/des_hose_02.png" id="21_lswn8"]
+[ext_resource type="Texture2D" uid="uid://db1xq6r2rfstv" path="res://art/Characters/Des/Hosing/des_splash_01.png" id="22_a6jrf"]
+[ext_resource type="Texture2D" uid="uid://c5hdb1g0ysom4" path="res://art/Characters/Des/Hosing/des_splash_02.png" id="23_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://hbk2tsl4v2te" path="res://art/Characters/Sol/KneelingAction/sol_kneelingaction_01.png" id="27_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://ca677l6ikxdu7" path="res://art/Characters/Sol/KneelingAction/sol_kneelingaction_02.png" id="28_qsp4k"]
+[ext_resource type="Script" uid="uid://cqghr4pyd3u5u" path="res://Characters/sol.gd" id="29_qsp4k"]
+[ext_resource type="AudioStream" uid="uid://scb3j7ocdjcy" path="res://music/song for gaming 2.mp3" id="30_kq58d"]
 
 [sub_resource type="Curve2D" id="Curve2D_074og"]
 _data = {
@@ -26,10 +37,69 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsp4k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_0odxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lswn8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq58d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_a6jrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xuqvo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryguw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_82xsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_getpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seu75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_xuqvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qsp4k")
+}],
+"loop": true,
+"name": &"kneeling",
+"speed": 5.0
+}]
+
 [node name="main" type="Node2D" unique_id=1134265817]
 
+[node name="CanvasLayer" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
+
 [node name="ValleyBG" type="Sprite2D" parent="." unique_id=1967708479]
-position = Vector2(963, 541)
+position = Vector2(959.6667, 540)
+scale = Vector2(0.4990741, 0.49907413)
 texture = ExtResource("19_cegan")
 
 [node name="MeadowBG" type="Node2D" parent="." unique_id=1649445747]
@@ -106,17 +176,51 @@ position = Vector2(576, 298)
 position = Vector2(595, 312)
 rotation = 0.48984787
 
-[node name="CanvasLayer" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
-
 [node name="Path2D" type="Path2D" parent="." unique_id=522285044]
+visible = false
 curve = SubResource("Curve2D_074og")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=2087909026]
-position = Vector2(719.8749, 713.9366)
+position = Vector2(920.8551, 957.9375)
 rotation = -0.3329473
-progress = 552.7378
+progress = 8.279236
 rotates = false
 
 [node name="Sol" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=829069097]
+position = Vector2(6.081156, -108.9322)
+rotation = 0.31415927
 scale = Vector2(0.48000002, 0.4820602)
 texture = ExtResource("18_cegan")
+
+[node name="DesHoseIdle" type="Node2D" parent="." unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
+position = Vector2(711, 508)
+script = ExtResource("20_lswn8")
+hose = NodePath("Hose")
+des = NodePath("DesBody")
+splash = NodePath("Splash")
+
+[node name="Hose" type="AnimatedSprite2D" parent="DesHoseIdle" unique_id=2041815878]
+position = Vector2(-157, 16)
+sprite_frames = SubResource("SpriteFrames_qsp4k")
+
+[node name="Splash" type="AnimatedSprite2D" parent="DesHoseIdle" unique_id=530269626]
+position = Vector2(-276, 41)
+sprite_frames = SubResource("SpriteFrames_kq58d")
+frame = 1
+frame_progress = 0.9615518
+
+[node name="DesBody" type="AnimatedSprite2D" parent="DesHoseIdle" unique_id=685161404]
+position = Vector2(101, 48)
+sprite_frames = SubResource("SpriteFrames_ryguw")
+frame_progress = 0.5992057
+
+[node name="SolIdle" type="AnimatedSprite2D" parent="." unique_id=1062379944]
+position = Vector2(1167, 733)
+sprite_frames = SubResource("SpriteFrames_seu75")
+animation = &"kneeling"
+frame_progress = 0.6562353
+script = ExtResource("29_qsp4k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1734629838]
+stream = ExtResource("30_kq58d")
+autoplay = true
