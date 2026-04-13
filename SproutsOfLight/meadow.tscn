@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b7yr4tx6q8nri"]
+
+[ext_resource type="Texture2D" uid="uid://dvx5w6jrwi2ys" path="res://art/Environment/Meadow/Meadow_Base.png" id="1_jv2tm"]
+[ext_resource type="Texture2D" uid="uid://cp3q8t75e1fdb" path="res://art/Environment/Meadow/Meadow_ScrapReference.png" id="2_nflf1"]
+[ext_resource type="Texture2D" uid="uid://ct8nha4lbbvtl" path="res://art/Environment/Meadow/Scrap/Scrap_l01_Beam.png" id="3_3alf4"]
+[ext_resource type="Texture2D" uid="uid://drgv1mu8nl82y" path="res://art/Environment/Meadow/Scrap/Scrap_l02_Sheet.png" id="4_na5fl"]
+[ext_resource type="Texture2D" uid="uid://d3as3p2fjb0qw" path="res://art/Environment/Meadow/Scrap/Scrap_l03_Barrel.png" id="5_mmlnq"]
+[ext_resource type="Texture2D" uid="uid://g6tvejsv7h2v" path="res://art/Environment/Meadow/Scrap/Scrap_l04_Cylinder.png" id="6_ip85j"]
+[ext_resource type="Texture2D" uid="uid://c0vqewy857ati" path="res://art/Environment/Meadow/Scrap/Scrap_l05_Sheet02.png" id="7_ty582"]
+[ext_resource type="Texture2D" uid="uid://bynrdmit64y3o" path="res://art/Environment/Meadow/Scrap/Scrap_l05_Sheet03.png" id="8_pp708"]
+[ext_resource type="Texture2D" uid="uid://p45o3rj2h50c" path="res://art/Environment/Meadow/Scrap/Scrap_l06_Barrel02.png" id="9_2ykcf"]
+[ext_resource type="Texture2D" uid="uid://binuqk0v840v3" path="res://art/Environment/Meadow/Scrap/Scrap_l07_Pipe.png" id="10_e4rga"]
+[ext_resource type="Texture2D" uid="uid://cscjtlq7wjdee" path="res://art/Environment/Meadow/Scrap/Scrap_l08_Beam.png" id="11_amoe3"]
+[ext_resource type="Texture2D" uid="uid://cfeegt3ptnrmm" path="res://art/Environment/Meadow/Scrap/Scrap_l09_Sheet04.png" id="12_xovyo"]
+[ext_resource type="Texture2D" uid="uid://cum7jwvgme30e" path="res://art/Environment/Meadow/Scrap/Scrap_l10_Beam02.png" id="13_r0mlf"]
+[ext_resource type="Texture2D" uid="uid://eg1gsmrjq36g" path="res://art/Environment/Meadow/Scrap/Scrap_l11_Rim.png" id="14_6leix"]
+[ext_resource type="Texture2D" uid="uid://b2pdnff1j1a7f" path="res://art/Environment/Meadow/Scrap/Scrap_l12_Sheet.png" id="15_5u6dn"]
+[ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="16_poc4h"]
+
+[node name="MeadowBG" type="Node2D" unique_id=618427778]
+
+[node name="MeadowBase" type="Sprite2D" parent="." unique_id=693085730]
+position = Vector2(960, 540)
+texture = ExtResource("1_jv2tm")
+
+[node name="MeadowScrapReference" type="Sprite2D" parent="." unique_id=1357342884]
+visible = false
+position = Vector2(961, 540)
+texture = ExtResource("2_nflf1")
+
+[node name="ScrapL01Beam" type="Sprite2D" parent="." unique_id=1640703106]
+position = Vector2(167, 279)
+texture = ExtResource("3_3alf4")
+
+[node name="ScrapL02Sheet" type="Sprite2D" parent="." unique_id=532119387]
+position = Vector2(255, 371)
+texture = ExtResource("4_na5fl")
+
+[node name="ScrapL03Barrel" type="Sprite2D" parent="." unique_id=994238120]
+position = Vector2(254, 463)
+texture = ExtResource("5_mmlnq")
+
+[node name="ScrapL04Cylinder" type="Sprite2D" parent="." unique_id=657362565]
+position = Vector2(398, 431)
+texture = ExtResource("6_ip85j")
+
+[node name="ScrapL05Sheet02" type="Sprite2D" parent="." unique_id=1867863894]
+position = Vector2(80, 355)
+texture = ExtResource("7_ty582")
+
+[node name="ScrapL05Sheet03" type="Sprite2D" parent="." unique_id=1885091621]
+position = Vector2(1510, 300)
+texture = ExtResource("8_pp708")
+
+[node name="ScrapL06Barrel02" type="Sprite2D" parent="." unique_id=1165155793]
+position = Vector2(1584, 383)
+texture = ExtResource("9_2ykcf")
+
+[node name="ScrapL07Pipe" type="Sprite2D" parent="." unique_id=1898052052]
+position = Vector2(1584, 332)
+texture = ExtResource("10_e4rga")
+
+[node name="ScrapL08Beam" type="Sprite2D" parent="." unique_id=196346543]
+position = Vector2(1701, 458)
+texture = ExtResource("11_amoe3")
+
+[node name="ScrapL09Sheet04" type="Sprite2D" parent="." unique_id=683832463]
+position = Vector2(1628.0001, 945.99994)
+scale = Vector2(1.3024358, 1.2730263)
+texture = ExtResource("12_xovyo")
+
+[node name="ScrapL10Beam02" type="Sprite2D" parent="." unique_id=1873024888]
+position = Vector2(1775, 439)
+texture = ExtResource("13_r0mlf")
+
+[node name="ScrapL11Rim" type="Sprite2D" parent="." unique_id=704675900]
+position = Vector2(-33, 816)
+scale = Vector2(1, 1.0013297)
+texture = ExtResource("14_6leix")
+
+[node name="ScrapL12Sheet" type="Sprite2D" parent="." unique_id=1669629660]
+position = Vector2(352.99997, 939)
+scale = Vector2(1.1634808, 1.1634808)
+texture = ExtResource("15_5u6dn")
+
+[node name="SwayingGrass" parent="." unique_id=162582034 instance=ExtResource("16_poc4h")]
+position = Vector2(576, 298)

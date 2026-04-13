@@ -2,25 +2,34 @@
 
 [ext_resource type="Script" uid="uid://ds02ffqx1e8fy" path="res://art/Environment/Meadow/Organics/swaying_grass.gd" id="1_4128j"]
 [ext_resource type="Shader" uid="uid://fq1rv6em0k7k" path="res://art/Environment/Meadow/Organics/SwayingGrass.gdshader" id="1_tdr2o"]
-[ext_resource type="Texture2D" uid="uid://cpar0cugw873y" path="res://art/Environment/Meadow/Organics/Grass_01.png" id="2_4128j"]
+[ext_resource type="Texture2D" uid="uid://bys10bj84vt7f" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Grass01.png" id="3_4128j"]
+[ext_resource type="Script" uid="uid://cnjx7i8ct8ocn" path="res://scripts/environment_state.gd" id="4_jei5d"]
+[ext_resource type="Texture2D" uid="uid://bkjm3t5kgsefr" path="res://art/Environment/Meadow/Organics/Lush Organic Elements/Env_LushOrganicElements_Grass01.png" id="5_5u7aq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s16o2"]
 resource_local_to_scene = true
 shader = ExtResource("1_tdr2o")
-shader_parameter/skew = -1.6600000000000001
+shader_parameter/skew = -1.66
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4128j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s16o2"]
-size = Vector2(41, 99)
+size = Vector2(98, 163.5)
 
 [node name="SwayingGrass" type="Area2D" unique_id=162582034]
 script = ExtResource("1_4128j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037038235]
 material = SubResource("ShaderMaterial_s16o2")
-texture = ExtResource("2_4128j")
+texture = ExtResource("3_4128j")
+script = ExtResource("4_jei5d")
+growingTex = ExtResource("3_4128j")
+lushTex = ExtResource("5_5u7aq")
+lushButton = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683138209]
-position = Vector2(-1.5, -4.5)
+material = SubResource("ShaderMaterial_4128j")
+position = Vector2(-1, 13.25)
 shape = SubResource("RectangleShape2D_s16o2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

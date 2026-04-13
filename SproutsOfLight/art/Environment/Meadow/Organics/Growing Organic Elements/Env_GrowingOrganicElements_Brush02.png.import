@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjbterkvvgros"
-path="res://.godot/imported/Env_LushOrganicElements_Tree13.png-ac2c8b2142dea948fb5874c744f88f80.ctex"
+uid="uid://8efxt0a3ygn"
+path="res://.godot/imported/Env_GrowingOrganicElements_Brush02.png-7f94bc138c400386fe83d55e4255128a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_LushOrganicElements_Tree13.png"
-dest_files=["res://.godot/imported/Env_LushOrganicElements_Tree13.png-ac2c8b2142dea948fb5874c744f88f80.ctex"]
+source_file="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush02.png"
+dest_files=["res://.godot/imported/Env_GrowingOrganicElements_Brush02.png-7f94bc138c400386fe83d55e4255128a.ctex"]
 
 [params]
 
