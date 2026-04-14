@@ -392,27 +392,34 @@ barrenTex = ExtResource("22_0cp0l")
 growingTex = ExtResource("43_abqjc")
 
 [node name="Tree12" type="Sprite2D" parent="Environment" unique_id=1006474314]
-position = Vector2(1564, 207)
+position = Vector2(1558, 201)
 texture = ExtResource("29_0cbny")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("29_0cbny")
 growingTex = ExtResource("51_rm4vd")
 
 [node name="Tree13" type="Sprite2D" parent="Environment" unique_id=2129860923]
-position = Vector2(1770, 233)
+position = Vector2(1748, 235)
 texture = ExtResource("30_hrvbo")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("30_hrvbo")
 growingTex = ExtResource("52_pjyto")
 
 [node name="SwayingGrass" parent="Environment" unique_id=162582034 instance=ExtResource("18_074og")]
-position = Vector2(1306, 718)
+position = Vector2(1388.0001, 703)
+rotation = -0.24479651
+
+[node name="SwayingGrass4" parent="Environment" unique_id=267650891 instance=ExtResource("18_074og")]
+position = Vector2(558, 873)
+rotation = 3.364166
+scale = Vector2(1.2432227, -1.9345949)
 
 [node name="SwayingGrass2" parent="Environment" unique_id=1556430157 instance=ExtResource("18_074og")]
-position = Vector2(574, 548)
+position = Vector2(384, 494.99997)
+rotation = 0.26467854
 
 [node name="SwayingGrass3" parent="Environment" unique_id=906191437 instance=ExtResource("18_074og")]
-position = Vector2(646, 800)
+position = Vector2(287, 743)
 
 [node name="Background" type="Node2D" parent="Environment" unique_id=1701937472]
 
@@ -425,7 +432,8 @@ growingTex = ExtResource("49_uit24")
 growButton = true
 
 [node name="Tree11" type="Sprite2D" parent="Environment/Background" unique_id=1939622513]
-position = Vector2(1197, 151)
+position = Vector2(1197, 142)
+scale = Vector2(1, 1.08)
 texture = ExtResource("28_f6a44")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("28_f6a44")
@@ -489,20 +497,22 @@ position = Vector2(109, 716)
 shape = SubResource("RectangleShape2D_vke2r")
 
 [node name="RocksRight" type="Sprite2D" parent="Environment/Foreground" unique_id=221167036]
-position = Vector2(1704, 896)
+position = Vector2(1700, 900)
 texture = ExtResource("28_gngh3")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("28_gngh3")
 growingTex = ExtResource("39_d2t1y")
 
 [node name="RocksLeft" type="Sprite2D" parent="Environment/Foreground" unique_id=1481310020]
-position = Vector2(362, 922)
+position = Vector2(356, 928)
 texture = ExtResource("31_wnkbs")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("31_wnkbs")
 growingTex = ExtResource("40_gngh3")
 
 [node name="Area2D" type="Area2D" parent="Environment/Foreground" unique_id=775896815 node_paths=PackedStringArray("sprite_2d")]
+position = Vector2(-19, 147)
+rotation = -0.10158787
 script = ExtResource("29_f6a44")
 sprite_2d = NodePath("Brush01")
 
@@ -520,6 +530,7 @@ position = Vector2(1587, 522)
 shape = SubResource("RectangleShape2D_rnkwl")
 
 [node name="Area2D2" type="Area2D" parent="Environment/Foreground" unique_id=2126158295 node_paths=PackedStringArray("sprite_2d")]
+position = Vector2(1, -14)
 script = ExtResource("29_f6a44")
 sprite_2d = NodePath("Brush02")
 
