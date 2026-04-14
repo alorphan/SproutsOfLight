@@ -205,6 +205,40 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_4k2k6")
 color_ramp = SubResource("GradientTexture1D_htxhm")
 alpha_curve = SubResource("CurveTexture_0rl1p")
 
+[sub_resource type="Curve" id="Curve_blkrb"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.26607537, 0.9563758), 0.0, 0.0, 0, 0, Vector2(0.8603104, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_abqjc"]
+curve = SubResource("Curve_blkrb")
+
+[sub_resource type="Curve" id="Curve_abqjc"]
+_limits = [0.0, 1024.0, 0.0, 34.368073]
+_data = [Vector2(0.15240824, 0.01845634), 0.0, 0.0, 0, 0, Vector2(13.488135, 1024), 0.0, 0.0, 0, 0, Vector2(21.175167, 1), 0.0, 0.0, 0, 1, Vector2(28.492239, 1), 0.0, 0.0, 0, 0, Vector2(30.8204, 1), 0.0, 0.0, 0, 0, Vector2(34.368073, 1), 0.0, 0.0, 1, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_6iyjs"]
+curve = SubResource("Curve_abqjc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_blkrb"]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(900, 400, 1)
+spread = 20.0
+initial_velocity_min = 20.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 10, 0)
+scale_min = 1.5
+scale_max = 3.0
+alpha_curve = SubResource("CurveTexture_abqjc")
+emission_curve = SubResource("CurveTexture_6iyjs")
+
+[sub_resource type="Environment" id="Environment_blkrb"]
+background_mode = 3
+glow_enabled = true
+glow_hdr_threshold = 1.5
+
 [node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "waterAnimation", "charactersLush")]
 script = ExtResource("1_d2t1y")
 commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Brush02"), NodePath("Environment/Foreground/Brush01")]
@@ -212,6 +246,7 @@ charactersBarren = NodePath("Characters/SolDesBarren")
 charactersGrowing = NodePath("Characters/SolDesGrowing")
 waterAnimation = NodePath("Environment/Tank/WaterAnim")
 charactersLush = NodePath("Characters/SolDesLush")
+worldState = 1
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -345,7 +380,7 @@ texture = ExtResource("33_gngh3")
 visible = false
 position = Vector2(1456, 332)
 sprite_frames = SubResource("SpriteFrames_f6a44")
-frame_progress = 0.39377546
+frame_progress = 0.70078564
 script = ExtResource("48_blkrb")
 
 [node name="Window" type="Sprite2D" parent="Environment/Tank" unique_id=150321830]
@@ -408,14 +443,14 @@ visible = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=178793947]
 position = Vector2(1174, 201)
 sprite_frames = SubResource("SpriteFrames_uypp3")
-frame_progress = 0.0061660316
+frame_progress = 0.31317157
 script = ExtResource("48_blkrb")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=1289756156]
 position = Vector2(946, 502)
 scale = Vector2(0.8010204, 0.8010204)
 sprite_frames = SubResource("SpriteFrames_abqjc")
-frame_progress = 0.29179937
+frame_progress = 0.5988137
 script = ExtResource("48_blkrb")
 
 [node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
@@ -433,3 +468,10 @@ visibility_rect = Rect2(-350, -200, 700, 200)
 process_material = SubResource("ParticleProcessMaterial_seu75")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="VFX" unique_id=1217237527]
+position = Vector2(926, 556)
+amount = 100
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_blkrb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1381137998]
+environment = SubResource("Environment_blkrb")
