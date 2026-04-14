@@ -29,6 +29,10 @@
 [ext_resource type="Texture2D" uid="uid://dm45s0nkec2q0" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_Tree13.png" id="30_hrvbo"]
 [ext_resource type="AudioStream" uid="uid://scb3j7ocdjcy" path="res://music/song for gaming 2.mp3" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://c8gu4f2c343gg" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_RocksLeft.png" id="31_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://b3s0mskoctjvj" path="res://art/Environment/Meadow/Inorganics/WaterTank/TankBackground.png" id="33_gngh3"]
+[ext_resource type="Texture2D" uid="uid://3ugfpc3vnf4s" path="res://art/Environment/Meadow/Inorganics/WaterTank/Window.png" id="34_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://ct0gqtlvf2eqj" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water01.png" id="35_qnost"]
+[ext_resource type="Texture2D" uid="uid://cdhkeft33mgj1" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water02.png" id="36_wnkbs"]
 [ext_resource type="Texture2D" uid="uid://c8mf3w2b0i3lf" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksRight.png" id="39_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://useabaytl058" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksLeft.png" id="40_gngh3"]
 [ext_resource type="Texture2D" uid="uid://8efxt0a3ygn" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush02.png" id="41_0n3wm"]
@@ -38,11 +42,30 @@
 [ext_resource type="Texture2D" uid="uid://dd66v7jb5bj2u" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree03.png" id="44_6iyjs"]
 [ext_resource type="Texture2D" uid="uid://b2hmentud53g5" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree06.png" id="46_e71vb"]
 [ext_resource type="Texture2D" uid="uid://bkf2jsxau0cih" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree07.png" id="47_rnkwl"]
+[ext_resource type="Texture2D" uid="uid://qghkqo5gtpbl" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Stream01.png" id="48_0cbny"]
+[ext_resource type="Script" uid="uid://d027lfdbksv0w" path="res://scripts/play_on_ready.gd" id="48_blkrb"]
 [ext_resource type="Texture2D" uid="uid://mtsmhrtdswfm" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree09.png" id="48_vke2r"]
+[ext_resource type="Texture2D" uid="uid://dhlli2y8dfxrs" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Stream02.png" id="49_hrvbo"]
 [ext_resource type="Texture2D" uid="uid://picxqc3k1gv7" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree10.png" id="49_uit24"]
 [ext_resource type="Texture2D" uid="uid://cucs3u48bk1qx" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree11.png" id="50_ruth0"]
+[ext_resource type="Texture2D" uid="uid://m8d6oucpeqps" path="res://art/Characters/DesAndSol/DesAndSol_01.png" id="50_uypp3"]
+[ext_resource type="Texture2D" uid="uid://csknjxnkakqde" path="res://art/Characters/DesAndSol/DesAndSol_02.png" id="51_blkrb"]
 [ext_resource type="Texture2D" uid="uid://dthc7or31eo2v" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree12.png" id="51_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://csdddo7rjicnk" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree13.png" id="52_pjyto"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6a44"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_qnost")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wnkbs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_074og"]
 _data = {
@@ -106,6 +129,34 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_uypp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_0cbny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hrvbo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abqjc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_uypp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_blkrb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_seu75"]
 blend_mode = 1
 
@@ -154,14 +205,13 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_4k2k6")
 color_ramp = SubResource("GradientTexture1D_htxhm")
 alpha_curve = SubResource("CurveTexture_0rl1p")
 
-[node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "charactersLush")]
-position = Vector2(-5, 9)
+[node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "waterAnimation", "charactersLush")]
 script = ExtResource("1_d2t1y")
 commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Brush02"), NodePath("Environment/Foreground/Brush01")]
 charactersBarren = NodePath("Characters/SolDesBarren")
 charactersGrowing = NodePath("Characters/SolDesGrowing")
+waterAnimation = NodePath("Environment/Tank/WaterAnim")
 charactersLush = NodePath("Characters/SolDesLush")
-worldState = 1
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -285,6 +335,24 @@ rotation = -0.5435217
 script = ExtResource("7_4lmeg")
 growingTex = ExtResource("42_qnost")
 
+[node name="Tank" type="Node2D" parent="Environment" unique_id=1473337606]
+
+[node name="TankBackground" type="Sprite2D" parent="Environment/Tank" unique_id=1650917983]
+position = Vector2(1450, 307)
+texture = ExtResource("33_gngh3")
+
+[node name="WaterAnim" type="AnimatedSprite2D" parent="Environment/Tank" unique_id=660513969]
+visible = false
+position = Vector2(1456, 332)
+sprite_frames = SubResource("SpriteFrames_f6a44")
+frame_progress = 0.100923724
+script = ExtResource("48_blkrb")
+
+[node name="Window" type="Sprite2D" parent="Environment/Tank" unique_id=150321830]
+position = Vector2(1449, 307)
+texture = ExtResource("34_0n3wm")
+script = ExtResource("7_4lmeg")
+
 [node name="Characters" type="Node2D" parent="." unique_id=1309734361]
 
 [node name="SolWalking" type="Path2D" parent="Characters" unique_id=522285044]
@@ -335,6 +403,20 @@ sprite_frames = SubResource("SpriteFrames_ryguw")
 frame_progress = 0.5992057
 
 [node name="SolDesGrowing" type="Node2D" parent="Characters" unique_id=2082016045]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=178793947]
+position = Vector2(1174, 201)
+sprite_frames = SubResource("SpriteFrames_uypp3")
+frame_progress = 0.71331406
+script = ExtResource("48_blkrb")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=1289756156]
+position = Vector2(946, 502)
+scale = Vector2(0.8010204, 0.8010204)
+sprite_frames = SubResource("SpriteFrames_abqjc")
+frame_progress = 0.99894774
+script = ExtResource("48_blkrb")
 
 [node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
 
@@ -349,3 +431,5 @@ amount = 2000
 preprocess = 0.5
 visibility_rect = Rect2(-350, -200, 700, 200)
 process_material = SubResource("ParticleProcessMaterial_seu75")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="VFX" unique_id=1217237527]

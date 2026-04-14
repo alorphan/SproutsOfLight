@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bynrdmit64y3o"
-path="res://.godot/imported/Scrap_l05_Sheet03.png-f0d8c9219f482262461aaf56550a8c1d.ctex"
+uid="uid://m8d6oucpeqps"
+path="res://.godot/imported/DesAndSol_01.png-4e85461776458c55b70fdc566c0f9119.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Environment/Meadow/Inorganics/Scrap_l05_Sheet03.png"
-dest_files=["res://.godot/imported/Scrap_l05_Sheet03.png-f0d8c9219f482262461aaf56550a8c1d.ctex"]
+source_file="res://art/Characters/DesAndSol/DesAndSol_01.png"
+dest_files=["res://.godot/imported/DesAndSol_01.png-4e85461776458c55b70fdc566c0f9119.ctex"]
 
 [params]
 

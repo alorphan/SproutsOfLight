@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct8nha4lbbvtl"
-path="res://.godot/imported/Scrap_l01_Beam.png-77d7c76339964e948cf22d2d4c08e11e.ctex"
+path="res://.godot/imported/Scrap_l01_Beam.png-fa747ffd4e97abf55b72c573e6cae349.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Environment/Meadow/Scrap/Scrap_l01_Beam.png"
-dest_files=["res://.godot/imported/Scrap_l01_Beam.png-77d7c76339964e948cf22d2d4c08e11e.ctex"]
+source_file="res://art/Environment/Meadow/Inorganics/Scrap_l01_Beam.png"
+dest_files=["res://.godot/imported/Scrap_l01_Beam.png-fa747ffd4e97abf55b72c573e6cae349.ctex"]
 
 [params]
 

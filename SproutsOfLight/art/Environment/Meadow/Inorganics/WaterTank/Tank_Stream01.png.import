@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bynrdmit64y3o"
-path="res://.godot/imported/Scrap_l05_Sheet03.png-f0d8c9219f482262461aaf56550a8c1d.ctex"
+uid="uid://qghkqo5gtpbl"
+path="res://.godot/imported/Tank_Stream01.png-545cce2d66e08d1406e2da0cb96a910e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Environment/Meadow/Inorganics/Scrap_l05_Sheet03.png"
-dest_files=["res://.godot/imported/Scrap_l05_Sheet03.png-f0d8c9219f482262461aaf56550a8c1d.ctex"]
+source_file="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Stream01.png"
+dest_files=["res://.godot/imported/Tank_Stream01.png-545cce2d66e08d1406e2da0cb96a910e.ctex"]
 
 [params]
 

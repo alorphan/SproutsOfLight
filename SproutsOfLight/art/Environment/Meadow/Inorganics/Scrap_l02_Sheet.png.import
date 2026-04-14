@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drgv1mu8nl82y"
-path="res://.godot/imported/Scrap_l02_Sheet.png-b10a4c24be20d0f0dad34da694f7d9a9.ctex"
+path="res://.godot/imported/Scrap_l02_Sheet.png-cbb73394b36438f915a4139487dc44fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Environment/Meadow/Scrap/Scrap_l02_Sheet.png"
-dest_files=["res://.godot/imported/Scrap_l02_Sheet.png-b10a4c24be20d0f0dad34da694f7d9a9.ctex"]
+source_file="res://art/Environment/Meadow/Inorganics/Scrap_l02_Sheet.png"
+dest_files=["res://.godot/imported/Scrap_l02_Sheet.png-cbb73394b36438f915a4139487dc44fd.ctex"]
 
 [params]
 
