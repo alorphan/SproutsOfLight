@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://xdmt2kqpn00x"]
+
+[ext_resource type="Texture2D" uid="uid://cvb8bv6ywpgvm" path="res://art/UI/item_languagefragment_lift.png" id="1_a0463"]
+[ext_resource type="Script" uid="uid://dfcujghwl7leb" path="res://scripts/item_data.gd" id="2_e87g4"]
+
+[resource]
+script = ExtResource("2_e87g4")
+name = "Ancient Language Fragment"
+description = "A fragment from an ancient civilization. Is there anyone out there that could translate it for me?"
+icon = ExtResource("1_a0463")
+metadata/_custom_type_script = "uid://dfcujghwl7leb"

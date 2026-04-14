@@ -25,7 +25,6 @@ texture = ExtResource("3_4128j")
 script = ExtResource("4_jei5d")
 growingTex = ExtResource("3_4128j")
 lushTex = ExtResource("5_5u7aq")
-lushButton = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683138209]
 material = SubResource("ShaderMaterial_4128j")

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cfjrd2oly2app"]
 
+[ext_resource type="Script" uid="uid://c4m4q1dm2m8ou" path="res://scripts/world_state_manager.gd" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://cnjx7i8ct8ocn" path="res://scripts/environment_state.gd" id="7_4lmeg"]
 [ext_resource type="PackedScene" uid="uid://bh64f12nmclmn" path="res://UI/hud.tscn" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="18_074og"]
@@ -42,6 +43,12 @@
 [ext_resource type="Texture2D" uid="uid://cucs3u48bk1qx" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree11.png" id="50_ruth0"]
 [ext_resource type="Texture2D" uid="uid://dthc7or31eo2v" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree12.png" id="51_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://csdddo7rjicnk" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree13.png" id="52_pjyto"]
+
+[sub_resource type="Curve2D" id="Curve2D_074og"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 928, 962, 0, 0, 0, 0, 578, 763, 0, 0, 0, 0, 925, 643)
+}
+point_count = 3
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_seu75"]
 animations = [{
@@ -99,12 +106,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_074og"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 928, 962, 0, 0, 0, 0, 578, 763, 0, 0, 0, 0, 925, 643)
-}
-point_count = 3
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_seu75"]
 blend_mode = 1
 
@@ -153,7 +154,14 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_4k2k6")
 color_ramp = SubResource("GradientTexture1D_htxhm")
 alpha_curve = SubResource("CurveTexture_0rl1p")
 
-[node name="main" type="Node2D" unique_id=1134265817]
+[node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "charactersLush")]
+position = Vector2(-5, 9)
+script = ExtResource("1_d2t1y")
+commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Brush02"), NodePath("Environment/Foreground/Brush01")]
+charactersBarren = NodePath("Characters/SolDesBarren")
+charactersGrowing = NodePath("Characters/SolDesGrowing")
+charactersLush = NodePath("Characters/SolDesLush")
+worldState = 1
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -189,41 +197,6 @@ script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("23_d2t1y")
 growingTex = ExtResource("44_6iyjs")
 
-[node name="Tree06" type="Sprite2D" parent="Environment" unique_id=28428243]
-position = Vector2(593, 150)
-texture = ExtResource("24_gngh3")
-script = ExtResource("7_4lmeg")
-barrenTex = ExtResource("24_gngh3")
-growingTex = ExtResource("46_e71vb")
-
-[node name="Tree07" type="Sprite2D" parent="Environment" unique_id=296984385]
-position = Vector2(629, 313)
-texture = ExtResource("25_0n3wm")
-script = ExtResource("7_4lmeg")
-barrenTex = ExtResource("25_0n3wm")
-growingTex = ExtResource("47_rnkwl")
-
-[node name="Tree09" type="Sprite2D" parent="Environment" unique_id=1419064671]
-position = Vector2(666, 301)
-texture = ExtResource("26_qnost")
-script = ExtResource("7_4lmeg")
-barrenTex = ExtResource("26_qnost")
-growingTex = ExtResource("48_vke2r")
-
-[node name="Tree10" type="Sprite2D" parent="Environment" unique_id=1442903580]
-position = Vector2(1168, 270)
-texture = ExtResource("27_wnkbs")
-script = ExtResource("7_4lmeg")
-barrenTex = ExtResource("27_wnkbs")
-growingTex = ExtResource("49_uit24")
-
-[node name="Tree11" type="Sprite2D" parent="Environment" unique_id=1939622513]
-position = Vector2(1197, 151)
-texture = ExtResource("28_f6a44")
-script = ExtResource("7_4lmeg")
-barrenTex = ExtResource("28_f6a44")
-growingTex = ExtResource("50_ruth0")
-
 [node name="Tree12" type="Sprite2D" parent="Environment" unique_id=1006474314]
 position = Vector2(1564, 207)
 texture = ExtResource("29_0cbny")
@@ -238,68 +211,81 @@ script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("30_hrvbo")
 growingTex = ExtResource("52_pjyto")
 
-[node name="RocksRight" type="Sprite2D" parent="Environment" unique_id=221167036]
+[node name="SwayingGrass" parent="Environment" unique_id=162582034 instance=ExtResource("18_074og")]
+position = Vector2(1306, 718)
+
+[node name="SwayingGrass2" parent="Environment" unique_id=1556430157 instance=ExtResource("18_074og")]
+position = Vector2(574, 548)
+
+[node name="SwayingGrass3" parent="Environment" unique_id=906191437 instance=ExtResource("18_074og")]
+position = Vector2(646, 800)
+
+[node name="Background" type="Node2D" parent="Environment" unique_id=1701937472]
+
+[node name="Tree10" type="Sprite2D" parent="Environment/Background" unique_id=1442903580]
+position = Vector2(1168, 270)
+texture = ExtResource("27_wnkbs")
+script = ExtResource("7_4lmeg")
+barrenTex = ExtResource("27_wnkbs")
+growingTex = ExtResource("49_uit24")
+
+[node name="Tree11" type="Sprite2D" parent="Environment/Background" unique_id=1939622513]
+position = Vector2(1197, 151)
+texture = ExtResource("28_f6a44")
+script = ExtResource("7_4lmeg")
+barrenTex = ExtResource("28_f6a44")
+growingTex = ExtResource("50_ruth0")
+
+[node name="Tree06" type="Sprite2D" parent="Environment/Background" unique_id=28428243]
+position = Vector2(593, 150)
+texture = ExtResource("24_gngh3")
+script = ExtResource("7_4lmeg")
+barrenTex = ExtResource("24_gngh3")
+growingTex = ExtResource("46_e71vb")
+
+[node name="Tree07" type="Sprite2D" parent="Environment/Background" unique_id=296984385]
+position = Vector2(629, 313)
+texture = ExtResource("25_0n3wm")
+script = ExtResource("7_4lmeg")
+barrenTex = ExtResource("25_0n3wm")
+growingTex = ExtResource("47_rnkwl")
+
+[node name="Tree09" type="Sprite2D" parent="Environment/Background" unique_id=1419064671]
+position = Vector2(666, 301)
+texture = ExtResource("26_qnost")
+script = ExtResource("7_4lmeg")
+barrenTex = ExtResource("26_qnost")
+growingTex = ExtResource("48_vke2r")
+
+[node name="Foreground" type="Node2D" parent="Environment" unique_id=677292857]
+
+[node name="RocksRight" type="Sprite2D" parent="Environment/Foreground" unique_id=221167036]
 position = Vector2(1704, 896)
 texture = ExtResource("28_gngh3")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("28_gngh3")
 growingTex = ExtResource("39_d2t1y")
 
-[node name="RocksLeft" type="Sprite2D" parent="Environment" unique_id=1481310020]
+[node name="RocksLeft" type="Sprite2D" parent="Environment/Foreground" unique_id=1481310020]
 position = Vector2(362, 922)
 texture = ExtResource("31_wnkbs")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("31_wnkbs")
 growingTex = ExtResource("40_gngh3")
 
-[node name="Brush02" type="Sprite2D" parent="Environment" unique_id=1150400136]
+[node name="Brush02" type="Sprite2D" parent="Environment/Foreground" unique_id=1150400136]
 position = Vector2(1772, 497.00012)
 rotation = -0.5910309
 script = ExtResource("7_4lmeg")
 growingTex = ExtResource("41_0n3wm")
 
-[node name="Brush01" type="Sprite2D" parent="Environment" unique_id=1264429960]
+[node name="Brush01" type="Sprite2D" parent="Environment/Foreground" unique_id=1264429960]
 position = Vector2(1576.9998, 510)
 rotation = -0.5435217
 script = ExtResource("7_4lmeg")
 growingTex = ExtResource("42_qnost")
 
-[node name="SwayingGrass" parent="Environment" unique_id=162582034 instance=ExtResource("18_074og")]
-visible = false
-position = Vector2(1205, 667)
-
 [node name="Characters" type="Node2D" parent="." unique_id=1309734361]
-
-[node name="SolIdle" type="AnimatedSprite2D" parent="Characters" unique_id=1062379944]
-visible = false
-position = Vector2(1167, 733)
-sprite_frames = SubResource("SpriteFrames_seu75")
-animation = &"kneeling"
-frame_progress = 0.6562353
-script = ExtResource("29_qsp4k")
-
-[node name="DesHoseIdle" type="Node2D" parent="Characters" unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
-visible = false
-position = Vector2(711, 508)
-script = ExtResource("20_lswn8")
-hose = NodePath("Hose")
-des = NodePath("DesBody")
-splash = NodePath("Splash")
-
-[node name="Hose" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=2041815878]
-position = Vector2(-157, 16)
-sprite_frames = SubResource("SpriteFrames_qsp4k")
-
-[node name="Splash" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=530269626]
-position = Vector2(-276, 41)
-sprite_frames = SubResource("SpriteFrames_kq58d")
-frame = 1
-frame_progress = 0.9615518
-
-[node name="DesBody" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=685161404]
-position = Vector2(101, 48)
-sprite_frames = SubResource("SpriteFrames_ryguw")
-frame_progress = 0.5992057
 
 [node name="SolWalking" type="Path2D" parent="Characters" unique_id=522285044]
 visible = false
@@ -316,6 +302,41 @@ position = Vector2(6.081156, -108.9322)
 rotation = 0.31415927
 scale = Vector2(0.48000002, 0.4820602)
 texture = ExtResource("18_cegan")
+
+[node name="SolDesBarren" type="Node2D" parent="Characters" unique_id=10149369]
+
+[node name="SolIdle" type="AnimatedSprite2D" parent="Characters/SolDesBarren" unique_id=1062379944]
+position = Vector2(1167, 733)
+sprite_frames = SubResource("SpriteFrames_seu75")
+animation = &"kneeling"
+frame_progress = 0.6562353
+script = ExtResource("29_qsp4k")
+
+[node name="DesHoseIdle" type="Node2D" parent="Characters/SolDesBarren" unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
+position = Vector2(711, 508)
+script = ExtResource("20_lswn8")
+hose = NodePath("Hose")
+des = NodePath("DesBody")
+splash = NodePath("Splash")
+
+[node name="Hose" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=2041815878]
+position = Vector2(-157, 16)
+sprite_frames = SubResource("SpriteFrames_qsp4k")
+
+[node name="Splash" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=530269626]
+position = Vector2(-276, 41)
+sprite_frames = SubResource("SpriteFrames_kq58d")
+frame = 1
+frame_progress = 0.9615518
+
+[node name="DesBody" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=685161404]
+position = Vector2(101, 48)
+sprite_frames = SubResource("SpriteFrames_ryguw")
+frame_progress = 0.5992057
+
+[node name="SolDesGrowing" type="Node2D" parent="Characters" unique_id=2082016045]
+
+[node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
 
 [node name="VFX" type="Node2D" parent="." unique_id=1975063161]
 
