@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfq7orgtgrcf4"]
 
-[ext_resource type="Texture2D" uid="uid://bys10bj84vt7f" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Grass01.png" id="1_uh02o"]
+[ext_resource type="Texture2D" uid="uid://bkjm3t5kgsefr" path="res://art/Environment/Meadow/Organics/Lush Organic Elements/Env_LushOrganicElements_Grass01.png" id="1_uh02o"]
 [ext_resource type="Script" uid="uid://dfcujghwl7leb" path="res://scripts/item_data.gd" id="2_roknu"]
 
 [resource]
