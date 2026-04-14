@@ -16,8 +16,9 @@ shader_parameter/skew = -1.66
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s16o2"]
 size = Vector2(98, 163.5)
 
-[node name="SwayingGrass" type="Area2D" unique_id=162582034]
+[node name="SwayingGrass" type="Area2D" unique_id=162582034 node_paths=PackedStringArray("sprite_2d")]
 script = ExtResource("1_4128j")
+sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037038235]
 material = SubResource("ShaderMaterial_s16o2")

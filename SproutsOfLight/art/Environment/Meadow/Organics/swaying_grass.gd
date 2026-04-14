@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@export var sprite_2d: Sprite2D
 
 @export var skewValue := 15
 @export var windSpeed := 2.0
