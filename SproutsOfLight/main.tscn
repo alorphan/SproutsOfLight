@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfjrd2oly2app"]
 
 [ext_resource type="Script" uid="uid://c4m4q1dm2m8ou" path="res://scripts/world_state_manager.gd" id="1_d2t1y"]
+[ext_resource type="AudioStream" uid="uid://dh0avhjq7n1j5" path="res://music/freesound_community-birds-19624.mp3" id="3_jx0wj"]
 [ext_resource type="Script" uid="uid://cnjx7i8ct8ocn" path="res://scripts/environment_state.gd" id="7_4lmeg"]
 [ext_resource type="PackedScene" uid="uid://bh64f12nmclmn" path="res://UI/hud.tscn" id="17_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dj1mhi1jcwdnr" path="res://art/Environment/Meadow/Organics/SwayingGrass.tscn" id="18_074og"]
@@ -366,6 +367,11 @@ waterAnimLush = NodePath("Environment/Tank/WaterAnimLush")
 worldState = 2
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="." unique_id=1833537931]
+stream = ExtResource("3_jx0wj")
+volume_db = -15.549
+autoplay = true
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1734629838]
 stream = ExtResource("30_kq58d")
