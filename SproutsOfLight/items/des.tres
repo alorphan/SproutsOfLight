@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bctirke8i44cu"]
+
+[ext_resource type="Texture2D" uid="uid://b6wm4ks13v6v3" path="res://art/Characters/Des/Hosing/des_hosing_01.png" id="1_frlme"]
+[ext_resource type="Script" uid="uid://dfcujghwl7leb" path="res://scripts/item_data.gd" id="2_hitfd"]
+
+[resource]
+script = ExtResource("2_hitfd")
+name = "'Des'"
+description = "A mysterious creature you found. He enjoys the water."
+icon = ExtResource("1_frlme")
+metadata/_custom_type_script = "uid://dfcujghwl7leb"

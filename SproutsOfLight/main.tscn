@@ -43,6 +43,12 @@
 [ext_resource type="Texture2D" uid="uid://dthc7or31eo2v" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree12.png" id="51_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://csdddo7rjicnk" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree13.png" id="52_pjyto"]
 
+[sub_resource type="Curve2D" id="Curve2D_074og"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 928, 962, 0, 0, 0, 0, 578, 763, 0, 0, 0, 0, 925, 643)
+}
+point_count = 3
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_seu75"]
 animations = [{
 "frames": [{
@@ -98,12 +104,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="Curve2D" id="Curve2D_074og"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 928, 962, 0, 0, 0, 0, 578, 763, 0, 0, 0, 0, 925, 643)
-}
-point_count = 3
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_seu75"]
 blend_mode = 1
@@ -270,37 +270,6 @@ position = Vector2(1205, 667)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1309734361]
 
-[node name="SolIdle" type="AnimatedSprite2D" parent="Characters" unique_id=1062379944]
-visible = false
-position = Vector2(1167, 733)
-sprite_frames = SubResource("SpriteFrames_seu75")
-animation = &"kneeling"
-frame_progress = 0.6562353
-script = ExtResource("29_qsp4k")
-
-[node name="DesHoseIdle" type="Node2D" parent="Characters" unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
-visible = false
-position = Vector2(711, 508)
-script = ExtResource("20_lswn8")
-hose = NodePath("Hose")
-des = NodePath("DesBody")
-splash = NodePath("Splash")
-
-[node name="Hose" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=2041815878]
-position = Vector2(-157, 16)
-sprite_frames = SubResource("SpriteFrames_qsp4k")
-
-[node name="Splash" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=530269626]
-position = Vector2(-276, 41)
-sprite_frames = SubResource("SpriteFrames_kq58d")
-frame = 1
-frame_progress = 0.9615518
-
-[node name="DesBody" type="AnimatedSprite2D" parent="Characters/DesHoseIdle" unique_id=685161404]
-position = Vector2(101, 48)
-sprite_frames = SubResource("SpriteFrames_ryguw")
-frame_progress = 0.5992057
-
 [node name="SolWalking" type="Path2D" parent="Characters" unique_id=522285044]
 visible = false
 curve = SubResource("Curve2D_074og")
@@ -316,6 +285,42 @@ position = Vector2(6.081156, -108.9322)
 rotation = 0.31415927
 scale = Vector2(0.48000002, 0.4820602)
 texture = ExtResource("18_cegan")
+
+[node name="SolDesBarren" type="Node2D" parent="Characters" unique_id=10149369]
+visible = false
+
+[node name="SolIdle" type="AnimatedSprite2D" parent="Characters/SolDesBarren" unique_id=1062379944]
+position = Vector2(1167, 733)
+sprite_frames = SubResource("SpriteFrames_seu75")
+animation = &"kneeling"
+frame_progress = 0.6562353
+script = ExtResource("29_qsp4k")
+
+[node name="DesHoseIdle" type="Node2D" parent="Characters/SolDesBarren" unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
+position = Vector2(711, 508)
+script = ExtResource("20_lswn8")
+hose = NodePath("Hose")
+des = NodePath("DesBody")
+splash = NodePath("Splash")
+
+[node name="Hose" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=2041815878]
+position = Vector2(-157, 16)
+sprite_frames = SubResource("SpriteFrames_qsp4k")
+
+[node name="Splash" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=530269626]
+position = Vector2(-276, 41)
+sprite_frames = SubResource("SpriteFrames_kq58d")
+frame = 1
+frame_progress = 0.9615518
+
+[node name="DesBody" type="AnimatedSprite2D" parent="Characters/SolDesBarren/DesHoseIdle" unique_id=685161404]
+position = Vector2(101, 48)
+sprite_frames = SubResource("SpriteFrames_ryguw")
+frame_progress = 0.5992057
+
+[node name="SolDesGrowing" type="Node2D" parent="Characters" unique_id=2082016045]
+
+[node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
 
 [node name="VFX" type="Node2D" parent="." unique_id=1975063161]
 
