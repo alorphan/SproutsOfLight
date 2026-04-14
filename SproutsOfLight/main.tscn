@@ -25,14 +25,17 @@
 [ext_resource type="Texture2D" uid="uid://dmidf5kwd8tr4" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_RocksRight.png" id="28_gngh3"]
 [ext_resource type="Texture2D" uid="uid://ca677l6ikxdu7" path="res://art/Characters/Sol/KneelingAction/sol_kneelingaction_02.png" id="28_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://boa6o6jvh7dbd" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_Tree12.png" id="29_0cbny"]
+[ext_resource type="Script" uid="uid://ds02ffqx1e8fy" path="res://art/Environment/Meadow/Organics/swaying_grass.gd" id="29_f6a44"]
 [ext_resource type="Script" uid="uid://cqghr4pyd3u5u" path="res://Characters/sol.gd" id="29_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://dm45s0nkec2q0" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_Tree13.png" id="30_hrvbo"]
 [ext_resource type="AudioStream" uid="uid://scb3j7ocdjcy" path="res://music/song for gaming 2.mp3" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://c8gu4f2c343gg" path="res://art/Environment/Meadow/Organics/Barren Organic Elements/Env_BarrenOrganicElements_RocksLeft.png" id="31_wnkbs"]
 [ext_resource type="Texture2D" uid="uid://b3s0mskoctjvj" path="res://art/Environment/Meadow/Inorganics/WaterTank/TankBackground.png" id="33_gngh3"]
+[ext_resource type="Shader" uid="uid://fq1rv6em0k7k" path="res://art/Environment/Meadow/Organics/SwayingGrass.gdshader" id="33_vke2r"]
 [ext_resource type="Texture2D" uid="uid://3ugfpc3vnf4s" path="res://art/Environment/Meadow/Inorganics/WaterTank/Window.png" id="34_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://ct0gqtlvf2eqj" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water01.png" id="35_qnost"]
 [ext_resource type="Texture2D" uid="uid://cdhkeft33mgj1" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water02.png" id="36_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://cx7wmca1xeypl" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush000.png" id="38_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://c8mf3w2b0i3lf" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksRight.png" id="39_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://useabaytl058" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksLeft.png" id="40_gngh3"]
 [ext_resource type="Texture2D" uid="uid://8efxt0a3ygn" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush02.png" id="41_0n3wm"]
@@ -56,6 +59,22 @@
 [ext_resource type="Texture2D" uid="uid://c851sq1b7y1nx" path="res://art/Characters/Sol/Sitting/Sol_Sitting02.png" id="54_rnkwl"]
 [ext_resource type="Texture2D" uid="uid://bx6d6sfmit76d" path="res://art/Characters/Des/Sitting/Des_Sitting01.png" id="55_vke2r"]
 [ext_resource type="Texture2D" uid="uid://vac7k0i4yggm" path="res://art/Characters/Des/Sitting/Des_Sitting02.png" id="56_uit24"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rnkwl"]
+shader = ExtResource("33_vke2r")
+shader_parameter/skew = -1.445
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vke2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnkwl"]
+size = Vector2(125.5, 104.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uit24"]
+shader = ExtResource("33_vke2r")
+shader_parameter/skew = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vke2r"]
+size = Vector2(173, 132)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6a44"]
 animations = [{
@@ -273,12 +292,12 @@ glow_hdr_threshold = 1.5
 
 [node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "waterAnimation", "charactersLush")]
 script = ExtResource("1_d2t1y")
-commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Brush02"), NodePath("Environment/Foreground/Brush01")]
+commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Area2D2/Brush02"), NodePath("Environment/Foreground/Area2D/Brush01")]
 charactersBarren = NodePath("Characters/SolDesBarren")
 charactersGrowing = NodePath("Characters/SolDesGrowing")
 waterAnimation = NodePath("Environment/Tank/WaterAnim")
 charactersLush = NodePath("Characters/SolDesLush")
-worldState = 2
+worldState = 1
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -390,17 +409,54 @@ script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("31_wnkbs")
 growingTex = ExtResource("40_gngh3")
 
-[node name="Brush02" type="Sprite2D" parent="Environment/Foreground" unique_id=1150400136]
+[node name="Area2D" type="Area2D" parent="Environment/Foreground" unique_id=775896815 node_paths=PackedStringArray("sprite_2d")]
+script = ExtResource("29_f6a44")
+sprite_2d = NodePath("Brush01")
+
+[node name="Brush01" type="Sprite2D" parent="Environment/Foreground/Area2D" unique_id=1264429960]
+material = SubResource("ShaderMaterial_rnkwl")
+position = Vector2(1576.9998, 510)
+rotation = -0.5435217
+texture = ExtResource("42_qnost")
+script = ExtResource("7_4lmeg")
+growingTex = ExtResource("42_qnost")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Foreground/Area2D" unique_id=1826355120]
+material = SubResource("ShaderMaterial_vke2r")
+position = Vector2(1587, 522)
+shape = SubResource("RectangleShape2D_rnkwl")
+
+[node name="Area2D2" type="Area2D" parent="Environment/Foreground" unique_id=2126158295 node_paths=PackedStringArray("sprite_2d")]
+script = ExtResource("29_f6a44")
+sprite_2d = NodePath("Brush02")
+
+[node name="Brush02" type="Sprite2D" parent="Environment/Foreground/Area2D2" unique_id=1150400136]
+material = SubResource("ShaderMaterial_uit24")
 position = Vector2(1772, 497.00012)
 rotation = -0.5910309
+texture = ExtResource("41_0n3wm")
 script = ExtResource("7_4lmeg")
 growingTex = ExtResource("41_0n3wm")
 
-[node name="Brush01" type="Sprite2D" parent="Environment/Foreground" unique_id=1264429960]
-position = Vector2(1576.9998, 510)
-rotation = -0.5435217
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Foreground/Area2D2" unique_id=2086031354]
+position = Vector2(1790.5, 493)
+shape = SubResource("RectangleShape2D_vke2r")
+
+[node name="Area2D3" type="Area2D" parent="Environment/Foreground" unique_id=1927483945 node_paths=PackedStringArray("sprite_2d")]
+script = ExtResource("29_f6a44")
+sprite_2d = NodePath("Brush03")
+
+[node name="Brush03" type="Sprite2D" parent="Environment/Foreground/Area2D3" unique_id=1725799960]
+material = SubResource("ShaderMaterial_uit24")
+position = Vector2(-17.000015, 770.99994)
+rotation = -0.39455223
+texture = ExtResource("38_0cp0l")
 script = ExtResource("7_4lmeg")
-growingTex = ExtResource("42_qnost")
+growingTex = ExtResource("38_0cp0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Foreground/Area2D3" unique_id=591546099]
+position = Vector2(109, 716)
+shape = SubResource("RectangleShape2D_vke2r")
 
 [node name="Tank" type="Node2D" parent="Environment" unique_id=1473337606]
 
@@ -491,13 +547,13 @@ script = ExtResource("48_blkrb")
 [node name="SolSit" type="AnimatedSprite2D" parent="Characters/SolDesLush" unique_id=390605260]
 position = Vector2(1040, 576)
 sprite_frames = SubResource("SpriteFrames_ruth0")
-frame_progress = 0.65918887
+frame_progress = 0.624876
 script = ExtResource("48_blkrb")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/SolDesLush" unique_id=2079770787]
 position = Vector2(1103, 604)
 sprite_frames = SubResource("SpriteFrames_rm4vd")
-frame_progress = 0.96731937
+frame_progress = 0.9330064
 script = ExtResource("48_blkrb")
 
 [node name="VFX" type="Node2D" parent="." unique_id=1975063161]
