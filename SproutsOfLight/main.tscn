@@ -345,7 +345,7 @@ texture = ExtResource("33_gngh3")
 visible = false
 position = Vector2(1456, 332)
 sprite_frames = SubResource("SpriteFrames_f6a44")
-frame_progress = 0.100923724
+frame_progress = 0.39377546
 script = ExtResource("48_blkrb")
 
 [node name="Window" type="Sprite2D" parent="Environment/Tank" unique_id=150321830]
@@ -408,14 +408,14 @@ visible = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=178793947]
 position = Vector2(1174, 201)
 sprite_frames = SubResource("SpriteFrames_uypp3")
-frame_progress = 0.71331406
+frame_progress = 0.0061660316
 script = ExtResource("48_blkrb")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/SolDesGrowing" unique_id=1289756156]
 position = Vector2(946, 502)
 scale = Vector2(0.8010204, 0.8010204)
 sprite_frames = SubResource("SpriteFrames_abqjc")
-frame_progress = 0.99894774
+frame_progress = 0.29179937
 script = ExtResource("48_blkrb")
 
 [node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4g5i2g17nrsk"]
 
 [ext_resource type="Texture2D" uid="uid://cebk743lf1noe" path="res://art/UI/UI_Panel.png" id="1_im3af"]
+[ext_resource type="Script" uid="uid://vb51uq22r7rt" path="res://UI/todo/to_do.gd" id="1_qijjy"]
 [ext_resource type="LabelSettings" uid="uid://ckpc8dkjoh6nt" path="res://UI/listText.tres" id="2_aqv4h"]
 [ext_resource type="PackedScene" uid="uid://dbknnmmiv6qnq" path="res://UI/todo/list_item.tscn" id="4_5ihff"]
 [ext_resource type="Script" uid="uid://d37ds1t2mo3p8" path="res://UI/todo/addButton.gd" id="4_iaio2"]
@@ -17,6 +18,7 @@ offset_right = -2.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qijjy")
 
 [node name="PanelContainer" type="NinePatchRect" parent="." unique_id=1733150488]
 layout_mode = 1
@@ -79,3 +81,4 @@ script = ExtResource("4_iaio2")
 layout_mode = 2
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Button" to="PanelContainer/MarginContainer/VBoxContainer/List" method="_on_pressed"]
+[connection signal="increaseXP" from="PanelContainer/MarginContainer/VBoxContainer/List/ListItem" to="." method="_on_list_item_increase_xp"]

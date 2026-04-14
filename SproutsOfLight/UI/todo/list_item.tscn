@@ -25,4 +25,5 @@ size_flags_horizontal = 10
 size_flags_vertical = 4
 texture_normal = ExtResource("1_ylu5e")
 
+[connection signal="pressed" from="CheckBox" to="." method="_on_check_box_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

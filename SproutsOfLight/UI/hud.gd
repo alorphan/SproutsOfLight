@@ -1,10 +1,14 @@
 extends CanvasLayer
 
+@onready var todo = get_node("ToDo")
+@onready var XPBar = get_node("XPBar")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	todo.increaseXP.connect(_on_list_item_increase_xp)
 
+func _on_list_item_increase_xp(value):
+	XPBar.get_node("TextureProgressBar").value += value
 
 func _on_to_do_button_pressed():
 	$ToDo.visible = !$ToDo.visible
