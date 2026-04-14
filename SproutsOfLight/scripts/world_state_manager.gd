@@ -1,5 +1,7 @@
 extends Node2D
 
+signal worldStateChanged(new_state)
+
 enum state {
 	BARREN,
 	GROWING,
@@ -16,8 +18,9 @@ enum state {
 		transitionWorldState(value)
 		worldState = value
 
-
 func transitionWorldState(new_state: int) -> void:
+	emit_signal("worldStateChanged", new_state)
+
 	for sprite in commonSprites:
 		match new_state:
 			state.BARREN:
@@ -35,6 +38,8 @@ func transitionWorldState(new_state: int) -> void:
 			state.LUSH:
 				charactersLush.visible = true
 				charactersBarren.visible = false
+				charactersGrowing.visible = false
+				waterAnimation.visible = false
 
 				if (sprite.lushTex == null):
 					# Some objects don't have a lush state, so just use the growing texture

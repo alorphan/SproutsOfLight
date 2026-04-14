@@ -33,3 +33,7 @@ func _start_wind() -> void:
 		-peak,
 		half
 	).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+
+func change_state(new_state: int) -> void:
+	sprite_2d.change_state(new_state)
+	

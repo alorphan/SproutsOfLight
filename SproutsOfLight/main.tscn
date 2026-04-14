@@ -52,6 +52,10 @@
 [ext_resource type="Texture2D" uid="uid://csknjxnkakqde" path="res://art/Characters/DesAndSol/DesAndSol_02.png" id="51_blkrb"]
 [ext_resource type="Texture2D" uid="uid://dthc7or31eo2v" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree12.png" id="51_rm4vd"]
 [ext_resource type="Texture2D" uid="uid://csdddo7rjicnk" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree13.png" id="52_pjyto"]
+[ext_resource type="Texture2D" uid="uid://cjfxfsf4go7mx" path="res://art/Characters/Sol/Sitting/Sol_Sitting01.png" id="53_e71vb"]
+[ext_resource type="Texture2D" uid="uid://c851sq1b7y1nx" path="res://art/Characters/Sol/Sitting/Sol_Sitting02.png" id="54_rnkwl"]
+[ext_resource type="Texture2D" uid="uid://bx6d6sfmit76d" path="res://art/Characters/Des/Sitting/Des_Sitting01.png" id="55_vke2r"]
+[ext_resource type="Texture2D" uid="uid://vac7k0i4yggm" path="res://art/Characters/Des/Sitting/Des_Sitting02.png" id="56_uit24"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6a44"]
 animations = [{
@@ -157,6 +161,34 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ruth0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_e71vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_rnkwl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rm4vd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_vke2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_uit24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_seu75"]
 blend_mode = 1
 
@@ -246,7 +278,7 @@ charactersBarren = NodePath("Characters/SolDesBarren")
 charactersGrowing = NodePath("Characters/SolDesGrowing")
 waterAnimation = NodePath("Environment/Tank/WaterAnim")
 charactersLush = NodePath("Characters/SolDesLush")
-worldState = 1
+worldState = 2
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -407,6 +439,7 @@ scale = Vector2(0.48000002, 0.4820602)
 texture = ExtResource("18_cegan")
 
 [node name="SolDesBarren" type="Node2D" parent="Characters" unique_id=10149369]
+visible = false
 
 [node name="SolIdle" type="AnimatedSprite2D" parent="Characters/SolDesBarren" unique_id=1062379944]
 position = Vector2(1167, 733)
@@ -455,6 +488,18 @@ script = ExtResource("48_blkrb")
 
 [node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
 
+[node name="SolSit" type="AnimatedSprite2D" parent="Characters/SolDesLush" unique_id=390605260]
+position = Vector2(1040, 576)
+sprite_frames = SubResource("SpriteFrames_ruth0")
+frame_progress = 0.65918887
+script = ExtResource("48_blkrb")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Characters/SolDesLush" unique_id=2079770787]
+position = Vector2(1103, 604)
+sprite_frames = SubResource("SpriteFrames_rm4vd")
+frame_progress = 0.96731937
+script = ExtResource("48_blkrb")
+
 [node name="VFX" type="Node2D" parent="." unique_id=1975063161]
 
 [node name="Rain" type="GPUParticles2D" parent="VFX" unique_id=107391155]
@@ -475,3 +520,7 @@ process_material = SubResource("ParticleProcessMaterial_blkrb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1381137998]
 environment = SubResource("Environment_blkrb")
+
+[connection signal="worldStateChanged" from="." to="Environment/SwayingGrass" method="change_state"]
+[connection signal="worldStateChanged" from="." to="Environment/SwayingGrass2" method="change_state"]
+[connection signal="worldStateChanged" from="." to="Environment/SwayingGrass3" method="change_state"]
