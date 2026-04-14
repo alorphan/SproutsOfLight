@@ -33,21 +33,33 @@
 [ext_resource type="Texture2D" uid="uid://b3s0mskoctjvj" path="res://art/Environment/Meadow/Inorganics/WaterTank/TankBackground.png" id="33_gngh3"]
 [ext_resource type="Shader" uid="uid://fq1rv6em0k7k" path="res://art/Environment/Meadow/Organics/SwayingGrass.gdshader" id="33_vke2r"]
 [ext_resource type="Texture2D" uid="uid://3ugfpc3vnf4s" path="res://art/Environment/Meadow/Inorganics/WaterTank/Window.png" id="34_0n3wm"]
-[ext_resource type="Texture2D" uid="uid://ct0gqtlvf2eqj" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water01.png" id="35_qnost"]
-[ext_resource type="Texture2D" uid="uid://cdhkeft33mgj1" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Water02.png" id="36_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://b8y6l0xr028qh" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_GrowingWater01.png" id="37_uit24"]
 [ext_resource type="Texture2D" uid="uid://cx7wmca1xeypl" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush000.png" id="38_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://brfpuhg3877ln" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_GrowingWater02.png" id="38_ruth0"]
 [ext_resource type="Texture2D" uid="uid://c8mf3w2b0i3lf" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksRight.png" id="39_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://51ueuwq0so6l" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_LushWater01.png" id="40_0dhbp"]
 [ext_resource type="Texture2D" uid="uid://useabaytl058" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_RocksLeft.png" id="40_gngh3"]
+[ext_resource type="Texture2D" uid="uid://wwvxb2r14lov" path="res://art/Characters/Goldfish/GoldfishAnim_01.png" id="40_wu3dr"]
 [ext_resource type="Texture2D" uid="uid://8efxt0a3ygn" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush02.png" id="41_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://cuhgqycc2w0yl" path="res://art/Characters/Goldfish/GoldfishAnim_02.png" id="41_cyx1q"]
+[ext_resource type="Texture2D" uid="uid://dhx66yowm5owd" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_LushWater02.png" id="41_jx0wj"]
+[ext_resource type="Texture2D" uid="uid://ccb61j55t74mw" path="res://art/Characters/Goldfish/GoldfishAnim_03.png" id="42_0dhbp"]
 [ext_resource type="Texture2D" uid="uid://bj5uyiusp1mw3" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree01.png" id="42_blkrb"]
 [ext_resource type="Texture2D" uid="uid://ghgpdgdm7g0p" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Brush01.png" id="42_qnost"]
 [ext_resource type="Texture2D" uid="uid://ca5bcxeimbcce" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree02.png" id="43_abqjc"]
+[ext_resource type="Texture2D" uid="uid://cmrhf2x4imt1u" path="res://art/Characters/Goldfish/GoldfishAnim_04.png" id="43_jx0wj"]
 [ext_resource type="Texture2D" uid="uid://dd66v7jb5bj2u" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree03.png" id="44_6iyjs"]
+[ext_resource type="Texture2D" uid="uid://bcooi4ne83tqf" path="res://art/Characters/Goldfish/GoldfishAnim_05.png" id="44_kkkcx"]
+[ext_resource type="Texture2D" uid="uid://bsw6ajee38sr0" path="res://art/Characters/Goldfish/GoldfishAnim_06.png" id="45_34ol3"]
+[ext_resource type="Texture2D" uid="uid://dqj0qpotkrt2r" path="res://art/Characters/Goldfish/GoldfishAnim_07.png" id="46_c2n8d"]
 [ext_resource type="Texture2D" uid="uid://b2hmentud53g5" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree06.png" id="46_e71vb"]
 [ext_resource type="Texture2D" uid="uid://bkf2jsxau0cih" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree07.png" id="47_rnkwl"]
+[ext_resource type="Texture2D" uid="uid://d08m1f3u48jw1" path="res://art/Characters/Goldfish/GoldfishAnim_08.png" id="47_wy5fy"]
 [ext_resource type="Texture2D" uid="uid://qghkqo5gtpbl" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Stream01.png" id="48_0cbny"]
 [ext_resource type="Script" uid="uid://d027lfdbksv0w" path="res://scripts/play_on_ready.gd" id="48_blkrb"]
+[ext_resource type="Texture2D" uid="uid://dgouuay2r8hpj" path="res://art/Characters/Goldfish/GoldfishAnim_09.png" id="48_gx4rg"]
 [ext_resource type="Texture2D" uid="uid://mtsmhrtdswfm" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree09.png" id="48_vke2r"]
+[ext_resource type="Texture2D" uid="uid://c07qq4h042iad" path="res://art/Characters/Goldfish/GoldfishAnim_10.png" id="49_5dllo"]
 [ext_resource type="Texture2D" uid="uid://dhlli2y8dfxrs" path="res://art/Environment/Meadow/Inorganics/WaterTank/Tank_Stream02.png" id="49_hrvbo"]
 [ext_resource type="Texture2D" uid="uid://picxqc3k1gv7" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree10.png" id="49_uit24"]
 [ext_resource type="Texture2D" uid="uid://cucs3u48bk1qx" path="res://art/Environment/Meadow/Organics/Growing Organic Elements/Env_GrowingOrganicElements_Tree11.png" id="50_ruth0"]
@@ -80,10 +92,62 @@ size = Vector2(173, 132)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("35_qnost")
+"texture": ExtResource("37_uit24")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_wnkbs")
+"texture": ExtResource("38_ruth0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkkcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_0dhbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jx0wj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_phcyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_wu3dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cyx1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0dhbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jx0wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_kkkcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_34ol3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_c2n8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_wy5fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gx4rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_5dllo")
 }],
 "loop": true,
 "name": &"default",
@@ -290,14 +354,16 @@ background_mode = 3
 glow_enabled = true
 glow_hdr_threshold = 1.5
 
-[node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "waterAnimation", "charactersLush")]
+[node name="main" type="Node2D" unique_id=1134265817 node_paths=PackedStringArray("commonSprites", "charactersBarren", "charactersGrowing", "waterAnimGrowing", "charactersLush", "goldfishAnim", "waterAnimLush")]
 script = ExtResource("1_d2t1y")
 commonSprites = [NodePath("Environment/Background/Tree10"), NodePath("Environment/Background/Tree11"), NodePath("Environment/Background/Tree06"), NodePath("Environment/Background/Tree07"), NodePath("Environment/Background/Tree09"), NodePath("Environment/Foreground/RocksRight"), NodePath("Environment/Foreground/RocksLeft"), NodePath("Environment/Foreground/Area2D2/Brush02"), NodePath("Environment/Foreground/Area2D/Brush01")]
 charactersBarren = NodePath("Characters/SolDesBarren")
 charactersGrowing = NodePath("Characters/SolDesGrowing")
-waterAnimation = NodePath("Environment/Tank/WaterAnim")
+waterAnimGrowing = NodePath("Environment/Tank/WaterAnimGrowing")
 charactersLush = NodePath("Characters/SolDesLush")
-worldState = 1
+goldfishAnim = NodePath("Environment/Tank/Goldfish")
+waterAnimLush = NodePath("Environment/Tank/WaterAnimLush")
+worldState = 2
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -318,6 +384,7 @@ texture = ExtResource("21_4lmeg")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("21_4lmeg")
 growingTex = ExtResource("42_blkrb")
+growButton = true
 
 [node name="Tree02" type="Sprite2D" parent="Environment" unique_id=1874272919]
 position = Vector2(225, 244)
@@ -325,6 +392,7 @@ texture = ExtResource("22_0cp0l")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("22_0cp0l")
 growingTex = ExtResource("43_abqjc")
+growButton = true
 
 [node name="Tree03" type="Sprite2D" parent="Environment" unique_id=1266315049]
 position = Vector2(383, 319)
@@ -332,6 +400,7 @@ texture = ExtResource("23_d2t1y")
 script = ExtResource("7_4lmeg")
 barrenTex = ExtResource("23_d2t1y")
 growingTex = ExtResource("44_6iyjs")
+growButton = true
 
 [node name="Tree12" type="Sprite2D" parent="Environment" unique_id=1006474314]
 position = Vector2(1564, 207)
@@ -464,11 +533,25 @@ shape = SubResource("RectangleShape2D_vke2r")
 position = Vector2(1450, 307)
 texture = ExtResource("33_gngh3")
 
-[node name="WaterAnim" type="AnimatedSprite2D" parent="Environment/Tank" unique_id=660513969]
+[node name="WaterAnimGrowing" type="AnimatedSprite2D" parent="Environment/Tank" unique_id=660513969]
 visible = false
-position = Vector2(1456, 332)
+position = Vector2(1456, 330)
 sprite_frames = SubResource("SpriteFrames_f6a44")
-frame_progress = 0.70078564
+frame_progress = 0.14282566
+script = ExtResource("48_blkrb")
+
+[node name="WaterAnimLush" type="AnimatedSprite2D" parent="Environment/Tank" unique_id=417299128]
+visible = false
+position = Vector2(1451, 307)
+sprite_frames = SubResource("SpriteFrames_kkkcx")
+frame_progress = 0.32204625
+script = ExtResource("48_blkrb")
+
+[node name="Goldfish" type="AnimatedSprite2D" parent="Environment/Tank" unique_id=1309391555]
+visible = false
+position = Vector2(1342, 318)
+sprite_frames = SubResource("SpriteFrames_phcyf")
+frame_progress = 0.96339035
 script = ExtResource("48_blkrb")
 
 [node name="Window" type="Sprite2D" parent="Environment/Tank" unique_id=150321830]
@@ -543,6 +626,7 @@ frame_progress = 0.5988137
 script = ExtResource("48_blkrb")
 
 [node name="SolDesLush" type="Node2D" parent="Characters" unique_id=790459151]
+visible = false
 
 [node name="SolSit" type="AnimatedSprite2D" parent="Characters/SolDesLush" unique_id=390605260]
 position = Vector2(1040, 576)
