@@ -364,7 +364,6 @@ waterAnimGrowing = NodePath("Environment/Tank/WaterAnimGrowing")
 charactersLush = NodePath("Characters/SolDesLush")
 goldfishAnim = NodePath("Environment/Tank/Goldfish")
 waterAnimLush = NodePath("Environment/Tank/WaterAnimLush")
-worldState = 2
 
 [node name="Hud" parent="." unique_id=338234812 instance=ExtResource("17_yaehf")]
 
@@ -604,6 +603,7 @@ position = Vector2(1167, 733)
 sprite_frames = SubResource("SpriteFrames_seu75")
 animation = &"kneeling"
 frame_progress = 0.6562353
+speed_scale = 0.245
 script = ExtResource("29_qsp4k")
 
 [node name="DesHoseIdle" type="Node2D" parent="Characters/SolDesBarren" unique_id=1122379951 node_paths=PackedStringArray("hose", "des", "splash")]
